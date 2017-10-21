@@ -1,10 +1,20 @@
-/* This code controls the Reflowduino solid state relay on and off
- *  to test that it's working. Simply enter "ON" or "OFF" in the serial
- *  monitor (case sensitive) and the relay will turn ON or OFF accordingly!
- *  
- *  Author: Timothy Woo (botletics.com)
- *  Last Modified: 10/20/2017
- *  License: GNU General Public License v3.0
+/*
+ * Title: Reflowduino Relay Demo
+ * Author: Timothy Woo
+ * Website: www.botletics.com
+ * Last modified: 10/21/2017
+ * 
+ * -----------------------------------------------------------------------------------------------
+ * This is an example sketch to test the Reflowduino solid-state relay. Simply enter "ON" or "OFF"
+ * in the serial monitor (case sensitive) and the relay will turn ON or OFF accordingly!
+ * 
+ * Order a Reflowduino at https://www.botletics.com/products/reflowduino
+ * Full documentation and design resources at https://github.com/botletics/Reflowdiuno
+ * 
+ * -----------------------------------------------------------------------------------------------
+ * License: This code is released under the GNU General Public License v3.0
+ * https://choosealicense.com/licenses/gpl-3.0/ and appropriate attribution must be
+ * included in all redistributions of this code.
  */
 
 #define relay 7
