@@ -12,8 +12,8 @@
  * and in the serial monitor you should see the commands being received. Note that the command
  * is only sent once when you press "START" and once when you press "STOP".
  * 
- * Order a Reflowduino at www.botletics.com
- * Full documentation and design resources at https://github.com/botletics/reflowduino
+ * Order a Reflowduino at https://www.botletics.com/products/reflowduino
+ * Full documentation and design resources at https://github.com/botletics/Reflowdiuno
  * 
  * -----------------------------------------------------------------------------------------------
  * License: This code is released under the GNU General Public License v3.0
