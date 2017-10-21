@@ -59,8 +59,10 @@ void loop() {
     Serial.print("--> Temperature: "); // The right arrow means it's sending data out
     Serial.print(temperature);
     Serial.println(" *C");
-    BT.print(dataChar); // This tells the app that it's data
-    BT.print(String(temperature)); // Need to cast to String for the app to receive it properly
+    if (!isnan(temperature)) { // Only send the temperature values if they're legit
+      BT.print(dataChar); // This tells the app that it's data
+      BT.print(String(temperature)); // Need to cast to String for the app to receive it properly
+    }
   }
   
   // Check for an incoming command. If nothing was sent, return to loop()
