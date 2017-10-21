@@ -1,5 +1,5 @@
 /*
- * Title: Reflowduino Demo Code
+ * Title: Reflowduino Bluetooth Demo
  * Author: Timothy Woo
  * Website: www.botletics.com
  * Last modified: 10/21/2017
