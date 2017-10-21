@@ -16,8 +16,8 @@
  * Full documentation and design resources at https://github.com/botletics/reflowduino
  * 
  * -----------------------------------------------------------------------------------------------
- * License: This code is released under the Creative Commons Share Alike v3.0 license
- * http://creativecommons.org/licenses/by-sa/3.0/ and appropriate attribution must be
+ * License: This code is released under the GNU General Public License v3.0
+ * https://choosealicense.com/licenses/gpl-3.0/ and appropriate attribution must be
  * included in all redistributions of this code.
  */
 
