@@ -4,4 +4,4 @@ The Reflowduino is an all-in-one Arduino-compatible controller board that can ea
 Better yet, all of this is completely open-source for all to enjoy, including EAGLE PCB files, Arduino IDE example code, sample Android app for Bluetooth control, and a full tutorial on how to modify a toaster oven to start cookin’!
 
 Visit [my website](https://www.botletics.com/products/) to order your own Reflowduino!
-Also, don’t forget to check out the [comprehensive Github wiki]()!
+Also, don’t forget to check out the [comprehensive Github wiki](https://github.com/botletics/Reflowdiuno/wiki)!
