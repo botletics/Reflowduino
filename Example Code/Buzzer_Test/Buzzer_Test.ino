@@ -1,11 +1,15 @@
-/* This code tests the piezo buzzer on the Reflowduino by playing a simple melody.
- *  
- * Created: 01/21/2010 by Tom Igoe
- * Modified: 10/30/2011 by Tom Igoe
- * Modified 10/21/2017 by Timothy Woo
+/*
+ * Title: Buzzer Test
+ * Author: Tom Igoe
+ * Modified: 10/21/2017 by Timothy Woo
+ * Last modified: 10/21/2017
  * 
  * This example code is in the public domain.
  * http://www.arduino.cc/en/Tutorial/Tone
+ * 
+ * -----------------------------------------------------------------------------------------------
+ * TThis code tests the piezo buzzer on the Reflowduino by playing a simple melody.
+ * 
  */
  
 #include "pitches.h"
