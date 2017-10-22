@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="25" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -245,8 +245,7 @@ botletics.com</text>
 <vertex x="53.34" y="46.6725"/>
 </polygon>
 <text x="33.655" y="4.318" size="1.27" layer="21" font="vector" ratio="16" rot="R90">GND</text>
-<text x="80.01" y="26.3525" size="2.1844" layer="21" font="vector" ratio="16" align="center">15A (AC)
-OUT</text>
+<text x="79.375" y="26.3525" size="3.175" layer="21" font="vector" ratio="16" align="center">AC OUT</text>
 <text x="53.8988" y="14.2875" size="1.27" layer="21" font="vector" ratio="16">RLY-</text>
 <text x="51.3588" y="37.7825" size="1.27" layer="21" font="vector" ratio="16">RLY+</text>
 <text x="8.89" y="30.7975" size="0.8128" layer="21" font="vector" ratio="16">500mA</text>
