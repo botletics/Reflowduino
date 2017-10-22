@@ -1,3 +1,13 @@
+/*
+ * Title: Thermocouple Test
+ * Author: Limor Fried/Ladyada for Adafruit Industries
+ * Modified: 10/21/2017 by Timothy Woo
+
+ * -----------------------------------------------------------------------------------------------
+ * This code is an example sketch to read and print the temperature from the thermocouple
+ * using the MAX31855 on board the Reflowduino. T
+ */
+
 /*************************************************** 
   This is an example for the Adafruit Thermocouple Sensor w/MAX31855K
 
