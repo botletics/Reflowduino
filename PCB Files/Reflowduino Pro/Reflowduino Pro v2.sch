@@ -8600,6 +8600,7 @@ V_USB for relay</text>
 <text x="368.3" y="157.48" size="1.778" layer="97">Cut trace to
 disable buzzer</text>
 <text x="132.08" y="215.9" size="1.778" layer="97">USB boot enable</text>
+<text x="401.828" y="16.764" size="3.81" layer="97">GPL-3.0</text>
 </plain>
 <instances>
 <instance part="Q1" gate="G$1" x="368.3" y="58.42"/>

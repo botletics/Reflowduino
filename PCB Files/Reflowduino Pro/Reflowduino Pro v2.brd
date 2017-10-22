@@ -32,7 +32,7 @@
 <layer number="22" name="bPlace" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
@@ -256,7 +256,8 @@ OUT</text>
 <wire x1="58.42" y1="37.846" x2="58.42" y2="5.08" width="0.3048" layer="21"/>
 <wire x1="58.42" y1="5.08" x2="55.88" y2="2.54" width="0.3048" layer="21"/>
 <wire x1="55.88" y1="2.54" x2="55.88" y2="0" width="0.3048" layer="21"/>
-<text x="1.27" y="57.15" size="2.1844" layer="25" font="vector" ratio="16">Designed by Timothy Woo</text>
+<text x="1.27" y="57.15" size="2.1844" layer="51" font="vector" ratio="16">Designed by Timothy Woo
+Hardware released under CC-BY-SA-4.0 license</text>
 <text x="14.5415" y="31.3055" size="0.8128" layer="21" font="vector" ratio="16">DONE</text>
 <text x="9.525" y="10.16" size="1.27" layer="21" font="vector" ratio="16">+</text>
 <text x="13.335" y="10.16" size="1.27" layer="21" font="vector" ratio="16">-</text>
