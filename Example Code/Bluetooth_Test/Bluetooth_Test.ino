@@ -1,5 +1,5 @@
 /*
- * Title: Reflowduino Bluetooth Demo
+ * Title: Reflowduino Bluetooth Test
  * Author: Timothy Woo
  * Website: www.botletics.com
  * Last modified: 10/21/2017
