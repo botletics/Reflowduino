@@ -8,8 +8,7 @@
  * http://www.arduino.cc/en/Tutorial/Tone
  * 
  * -----------------------------------------------------------------------------------------------
- * TThis code tests the piezo buzzer on the Reflowduino by playing a simple melody.
- * 
+ * This code tests the piezo buzzer on the Reflowduino by playing a simple melody.
  */
  
 #include "pitches.h"
