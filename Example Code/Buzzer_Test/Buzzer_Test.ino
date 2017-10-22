@@ -1,20 +1,13 @@
-/*
-  Melody
-
- Plays a melody
-
- circuit:
- * 8-ohm speaker on digital pin 8
-
- created 21 Jan 2010
- modified 30 Aug 2011
- by Tom Igoe
-
-This example code is in the public domain.
-
- http://www.arduino.cc/en/Tutorial/Tone
-
+/* This code tests the piezo buzzer on the Reflowduino by playing a simple melody.
+ *  
+ * Created: 01/21/2010 by Tom Igoe
+ * Modified: 10/30/2011 by Tom Igoe
+ * Modified 10/21/2017 by Timothy Woo
+ * 
+ * This example code is in the public domain.
+ * http://www.arduino.cc/en/Tutorial/Tone
  */
+ 
 #include "pitches.h"
 
 #define buzzer 5
