@@ -42,7 +42,7 @@ unsigned long sendRate = 2000; // Send data to app every 2s
 
 void setup() {
   Serial.begin(9600); // This should be different from the Bluetooth baud rate
-  BT.begin(57600); // Please see the "Bluetooth_Setup" sketch before using this code
+  BT.begin(57600);
 
   while (!Serial) delay(1); // OPTIONAL: Wait for serial to connect
   Serial.println("*****Reflowduino Bluetooth Demo*****");
