@@ -16,7 +16,7 @@
  * 
  * -----------------------------------------------------------------------------------------------
  * Credits: Special thanks to all those who have been an invaluable part of the DIY community,
- * like the author of the Arduino PID library and the developers at Adafruit for the MAX31855 library!
+ * like the author of the Arduino PID library and the developers at Adafruit!
  * 
  * -----------------------------------------------------------------------------------------------
  * License: This code is released under the GNU General Public License v3.0
@@ -61,10 +61,10 @@ Adafruit_MAX31855 thermocouple(MAX_CS);
 #define T_soak 200
 #define T_reflow 245
 #define T_cool 30 // Temperature at which the board is "ready" (dinner bell sounds!)
-#define preheat_rate 1.5 // Increase of 1-3 *C/s
+#define preheat_rate 2 // Increase of 1-3 *C/s
 #define soak_rate 0.7 // Increase of 0.5-1 *C/s
 #define reflow_rate 2 // Increase of 1-3 *C/s
-#define cool_rate -4 // Decrease of < 6 *C/s max to prevent thermal shock. Negative sign indicates decrease
+#define cool_rate -3 // Decrease of < 6 *C/s max to prevent thermal shock. Negative sign indicates decrease
 
 // Define PID parameters
 #define PID_sampleTime 1000
@@ -127,7 +127,7 @@ void setup() {
   myPID.SetSampleTime(PID_sampleTime);
   myPID.SetMode(AUTOMATIC); // Turn on PID control
 
-  while (!Serial) delay(1); // OPTIONAL: Wait for serial to connect
+//  while (!Serial) delay(1); // OPTIONAL: Wait for serial to connect
   Serial.println("*****Reflowduino demo*****");
 }
 
@@ -252,7 +252,8 @@ void loop() {
   if (request == startReflow) { // Command from app to start reflow process
     justStarted = true;
     t_start = millis(); // Record the start time
-    Serial.println("<-- ***Starting reflow process!"); // Left arrow means it received a command
+    digitalWrite(relay, HIGH); // Turn off appliance and set flag to stop PID control
+    Serial.println("<-- ***Reflow process started!"); // Left arrow means it received a command
   }
   else if (request == stopReflow) { // Command to stop reflow process
     digitalWrite(relay, LOW); // Turn off appliance and set flag to stop PID control
