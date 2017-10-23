@@ -63,14 +63,14 @@ Adafruit_MAX31855 thermocouple(MAX_CS);
 //#define T_reflow 249
 
 // "Low-temp" lead-free solder paste (melting point around 138*C)
-//#define T_preheat 90
-//#define T_soak 138
-//#define T_reflow 165
+#define T_preheat 90
+#define T_soak 138
+#define T_reflow 165
 
 // Test values to make sure your Reflowduino is actually working
-#define T_preheat 50
-#define T_soak 80
-#define T_reflow 100
+//#define T_preheat 50
+//#define T_soak 80
+//#define T_reflow 100
 
 #define T_cool 30 // Temperature at which the board is "ready" (dinner bell sounds!)
 #define preheat_rate 2 // Increase of 1-3 *C/s
