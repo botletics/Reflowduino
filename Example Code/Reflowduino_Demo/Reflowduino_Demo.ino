@@ -126,7 +126,7 @@ unsigned long duration, t_final, windowStartTime;
 
 void setup() {
   Serial.begin(9600); // This should be different from the Bluetooth baud rate
-  BT.begin(57600); // Please see the "Bluetooth_Setup" sketch before using this code
+  BT.begin(57600);
 
   pinMode(buzzer, OUTPUT);
   pinMode(LED, OUTPUT);
