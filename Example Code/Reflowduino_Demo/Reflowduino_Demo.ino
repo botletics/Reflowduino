@@ -2,14 +2,16 @@
  * Title: Reflowduino Demo
  * Author: Timothy Woo
  * Website: www.botletics.com
- * Last modified: 10/21/2017
+ * Last modified: 10/23/2017
  * 
  * -----------------------------------------------------------------------------------------------
  * This is an example sketch for the Reflowduino reflow oven controller board. The default
  * settings in this code is for lead-free solder found in most solder paste, but the parameters
  * can be changed or added to suit your exact needs. The code implements temperature PID control
  * to follow the desired temperature profile and uses Bluetooth Low Energy (BLE) to communicate
- * the readings to the Reflowdiuno app.
+ * the readings to the Reflowdiuno app. This code can also enable the Reflowduino to automatically
+ * enter data points into Excel to graph the data in real time if connected to a computer. Simply
+ * uncomment lines 262-268 to enable this feature!
  * 
  * Order a Reflowduino at https://www.botletics.com/products/reflowduino
  * Full documentation and design resources at https://github.com/botletics/Reflowdiuno
@@ -31,6 +33,7 @@
  */
 
 #include <SoftwareSerial.h> // Library needed for Bluetooth communication
+#include <Keyboard.h> // Only if you need the ATmega32u4 to act as a keyboard
 
 // Libraries needed for using MAX31855 thermocouple interface
 #include <SPI.h>
@@ -122,7 +125,7 @@ int windowSize = 2000;
 unsigned long sendRate = 2000; // Send data to app every 2s
 unsigned long t_start = 0; // For keeping time during reflow process
 unsigned long previousMillis = 0;
-unsigned long duration, t_final, windowStartTime;
+unsigned long duration, t_final, windowStartTime, timer;
 
 void setup() {
   Serial.begin(9600); // This should be different from the Bluetooth baud rate
@@ -139,8 +142,10 @@ void setup() {
   myPID.SetSampleTime(PID_sampleTime);
   myPID.SetMode(AUTOMATIC); // Turn on PID control
 
-  while (!Serial) delay(1); // OPTIONAL: Wait for serial to connect. Uncomment for standalone operation!
+  while (!Serial) delay(1); // OPTIONAL: Wait for serial to connect
   Serial.println("*****Reflowduino demo*****");
+
+  Keyboard.begin(); // Only if you want to type data into Excel
 }
 
 void loop() {
@@ -252,6 +257,16 @@ void loop() {
     if (!isnan(temperature)) { // Only send the temperature values if they're legit
       BT.print(dataChar); // This tells the app that it's data
       BT.print(String(temperature)); // Need to cast to String for the app to receive it properly
+
+      /*
+      if (reflow) {
+        // Type time and temperature data into Excel on separate columns!
+        Keyboard.print((millis()-timer)/1000); // Convert elapsed time from ms to s
+        Keyboard.print('\t'); // Tab to go to next column
+        Keyboard.print(temperature);
+        Keyboard.println('\n'); // Jump to new row
+      }
+      */
     }
   }
   
@@ -259,11 +274,13 @@ void loop() {
   if (BT.available() < 1) return;
 
   request = BT.read();  // Read request
-  Serial.print("REQUEST: "); Serial.println(request); // DEBUG
+//  Serial.print("REQUEST: "); Serial.println(request); // DEBUG
 
   if (request == startReflow) { // Command from app to start reflow process
     justStarted = true;
+    reflow = true; // Reflow started!
     t_start = millis(); // Record the start time
+    timer = millis(); // Timer for logging data points
     digitalWrite(relay, HIGH); // Turn off appliance and set flag to stop PID control
     Serial.println("<-- ***Reflow process started!"); // Left arrow means it received a command
   }
