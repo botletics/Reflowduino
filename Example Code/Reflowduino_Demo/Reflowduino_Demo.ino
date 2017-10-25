@@ -157,6 +157,8 @@ void loop() {
   
   /***************************** REFLOW PROCESS CODE *****************************/
   if (reflow) {
+    digitalWrite(LED, HIGH); // Red LED indicates reflow is underway
+    
     temperature = thermocouple.readCelsius(); // Read temperature
 //  temperature = thermocouple.readFarenheit(); // Alternatively, read in deg F
 
@@ -246,6 +248,7 @@ void loop() {
     if (output > millis() - windowStartTime) digitalWrite(relay, HIGH);
     else digitalWrite(relay, LOW);
   }
+  else digitalWrite(LED, LOW);
 
   /***************************** BLUETOOTH CODE *****************************/
   BT.flush();
