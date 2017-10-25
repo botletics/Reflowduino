@@ -59,6 +59,9 @@ SoftwareSerial BT = SoftwareSerial(BT_TX,BT_RX); // Reflowduino (RX, TX), Blueto
 // Reflowduino uses hardware SPI to save digital pins
 Adafruit_MAX31855 thermocouple(MAX_CS);
 
+// Define if you want to enable the keyboard feature to type data into Excel
+#define enableKeyboard false
+
 // Define reflow temperature profile parameters (in *C)
 // Standard lead-free solder paste (melting point around 215*C)
 //#define T_preheat 150
@@ -145,7 +148,7 @@ void setup() {
   while (!Serial) delay(1); // OPTIONAL: Wait for serial to connect
   Serial.println("*****Reflowduino demo*****");
 
-  Keyboard.begin(); // Only if you want to type data into Excel
+  if (enableKeyboard) Keyboard.begin(); // Only if you want to type data into Excel
 }
 
 void loop() {
@@ -258,15 +261,15 @@ void loop() {
       BT.print(dataChar); // This tells the app that it's data
       BT.print(String(temperature)); // Need to cast to String for the app to receive it properly
 
-      /*
-      if (reflow) {
+      if (enableKeyboard && reflow) {
         // Type time and temperature data into Excel on separate columns!
         Keyboard.print((millis()-timer)/1000); // Convert elapsed time from ms to s
         Keyboard.print('\t'); // Tab to go to next column
         Keyboard.print(temperature);
+        Keyboard.print('\t');
+        Keyboard.print(digitalRead(relay)); // Record the relay state as well!
         Keyboard.println('\n'); // Jump to new row
       }
-      */
     }
   }
   
@@ -281,7 +284,6 @@ void loop() {
     reflow = true; // Reflow started!
     t_start = millis(); // Record the start time
     timer = millis(); // Timer for logging data points
-    digitalWrite(relay, HIGH); // Turn off appliance and set flag to stop PID control
     Serial.println("<-- ***Reflow process started!"); // Left arrow means it received a command
   }
   else if (request == stopReflow) { // Command to stop reflow process
