@@ -53,10 +53,10 @@ SoftwareSerial BT = SoftwareSerial(BT_TX,BT_RX); // Reflowduino (RX, TX), Blueto
 Adafruit_MAX31855 thermocouple(MAX_CS);
 
 // Define if you want to enable the keyboard feature to type data into Excel
-#define enableKeyboard true
+#define enableKeyboard false
 
 // Define a desired temperature in deg C
-#define desiredTemp 60
+#define desiredTemp 28
 
 // Define PID parameters
 #define PID_sampleTime 1000
@@ -173,7 +173,6 @@ void loop() {
     justStarted = true;
     reflow = true; // Reflow started!
     timer = millis(); // Timer for logging data points
-    digitalWrite(relay, HIGH); // Turn off appliance and set flag to stop PID control
     Serial.println("<-- ***Reflow process started!"); // Left arrow means it received a command
   }
   else if (request == stopReflow) { // Command to stop reflow process
