@@ -28,8 +28,8 @@
  * -----------------------------------------------------------------------------------------------
  * Disclaimer: Dealing with mains voltages is dangerous and potentially life-threatening!
  * If you do not have adequate experience working with high voltages, please consult someone
- * with experience or avoid this project altogether. We shall not be liable of any damage that
- * might occur form the use of the Reflowduino, and all actions are taken at your own risk.
+ * with experience or avoid this project altogether. We shall not be liable for any damage that
+ * might occur involving the use of the Reflowduino and all actions are taken at your own risk.
  */
 
 #include <SoftwareSerial.h> // Library needed for Bluetooth communication
