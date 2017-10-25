@@ -11,9 +11,6 @@
  * the PID gains accordingly by evaluating parameters such as reponse time, overshoot, and steady-
  * state error which are explained in more detail on my Github tutorial.
  * 
- * Order a Reflowduino at https://www.botletics.com/products/reflowduino
- * Full documentation and design resources at https://github.com/botletics/Reflowdiuno
- * 
  * -----------------------------------------------------------------------------------------------
  * Credits: Special thanks to Brett Beauregard, author of the Arduino PID Library!
  * 
@@ -25,8 +22,8 @@
  * -----------------------------------------------------------------------------------------------
  * Disclaimer: Dealing with mains voltages is dangerous and potentially life-threatening!
  * If you do not have adequate experience working with high voltages, please consult someone
- * with experience or avoid this project altogether. We shall not be liable of any damage that
- * might occur form the use of the Reflowduino, and all actions are taken at your own risk.
+ * with experience or avoid this project altogether. We shall not be liable for any damage that
+ * might occur involving the use of the Reflowduino and all actions are taken at your own risk.
  */
 
 #include <SoftwareSerial.h> // Library needed for Bluetooth communication
@@ -56,7 +53,7 @@ Adafruit_MAX31855 thermocouple(MAX_CS);
 #define enableKeyboard false
 
 // Define a desired temperature in deg C
-#define desiredTemp 28
+#define desiredTemp 100
 
 // Define PID parameters
 #define PID_sampleTime 1000
