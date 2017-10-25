@@ -40,6 +40,7 @@
 #define relay 7
 #define BT_RX 9
 #define BT_TX 10
+#define LED 13
 #define MAX_CS 8 // MAX31855 chip select pin
 
 // Initialize Bluetooth software serial
@@ -53,7 +54,7 @@ Adafruit_MAX31855 thermocouple(MAX_CS);
 #define enableKeyboard false
 
 // Define a desired temperature in deg C
-#define desiredTemp 100
+#define desiredTemp 50
 
 // Define PID parameters
 #define PID_sampleTime 1000
@@ -88,7 +89,10 @@ void setup() {
   Serial.begin(9600); // This should be different from the Bluetooth baud rate
   BT.begin(57600);
 
+  pinMode(LED, OUTPUT);
   pinMode(relay, OUTPUT);
+
+  digitalWrite(LED, LOW);
   digitalWrite(relay, LOW); // Set default relay state to OFF
 
   setPoint = desiredTemp;
@@ -106,23 +110,23 @@ void setup() {
 void loop() {
   /***************************** MEASURE TEMPERATURE *****************************/
   temperature = thermocouple.readCelsius(); // Read temperature
+//  temperature = thermocouple.readFarenheit(); // Alternatively, read in deg F but will need to modify code
   
   /***************************** REFLOW PROCESS CODE *****************************/
   if (reflow) {
-    temperature = thermocouple.readCelsius(); // Read temperature
-//  temperature = thermocouple.readFarenheit(); // Alternatively, read in deg F
+    digitalWrite(LED, HIGH); // Red LED indicates process is underway
 
     // This only runs when you first start the test
     if (justStarted) {
       justStarted = false;
       windowStartTime = millis();
       
-      if (isnan(T_start)) {
+      if (isnan(temperature)) {
        Serial.println("Invalid reading, check thermocouple!");
       }
       else {
        Serial.print("Starting temperature: ");
-       Serial.print(T_start);
+       Serial.print(temperature);
        Serial.println(" *C");
       }
     }
@@ -133,6 +137,7 @@ void loop() {
     if (output > millis() - windowStartTime) digitalWrite(relay, HIGH);
     else digitalWrite(relay, LOW);
   }
+  else digitalWrite(LED, LOW);
 
   /***************************** BLUETOOTH CODE *****************************/
   BT.flush();
