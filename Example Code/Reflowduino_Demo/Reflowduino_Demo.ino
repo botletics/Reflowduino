@@ -2,7 +2,7 @@
  * Title: Reflowduino Demo
  * Author: Timothy Woo
  * Website: www.botletics.com
- * Last modified: 10/23/2017
+ * Last modified: 10/25/2017
  * 
  * -----------------------------------------------------------------------------------------------
  * This is an example sketch for the Reflowduino reflow oven controller board. The default
@@ -240,7 +240,7 @@ void loop() {
     // Compute PID output (from 0 to windowSize) and control relay accordingly
     myPID.Compute(); // This will only be evaluated at the PID sampling rate
     if (millis() - windowStartTime > windowSize) windowStartTime += windowSize; // Shift the time window
-    if (output > millis() - windowStartTime) digitalWrite(relay, HIGH);
+    if (output < millis() - windowStartTime) digitalWrite(relay, HIGH);
     else digitalWrite(relay, LOW);
   }
 
