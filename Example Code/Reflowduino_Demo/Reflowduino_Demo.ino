@@ -154,13 +154,11 @@ void setup() {
 void loop() {
   /***************************** MEASURE TEMPERATURE *****************************/
   temperature = thermocouple.readCelsius(); // Read temperature
+//  temperature = thermocouple.readFarenheit(); // Alternatively, read in deg F but will need to modify code
   
   /***************************** REFLOW PROCESS CODE *****************************/
   if (reflow) {
     digitalWrite(LED, HIGH); // Red LED indicates reflow is underway
-    
-    temperature = thermocouple.readCelsius(); // Read temperature
-//  temperature = thermocouple.readFarenheit(); // Alternatively, read in deg F
 
     // This only runs when you first start the reflow process
     if (justStarted) {
