@@ -49,7 +49,7 @@
 #define relay 7
 #define BT_RX 9
 #define BT_TX 10
-#define LED 13
+#define LED 13 // This LED is used to indicate if the reflow process is underway
 #define MAX_CS 8 // MAX31855 chip select pin
 
 // Initialize Bluetooth software serial
@@ -69,16 +69,16 @@ Adafruit_MAX31855 thermocouple(MAX_CS);
 //#define T_reflow 249
 
 // "Low-temp" lead-free solder paste (melting point around 138*C)
-//#define T_preheat 90
-//#define T_soak 138
-//#define T_reflow 165
+#define T_preheat 90
+#define T_soak 138
+#define T_reflow 165
 
 // Test values to make sure your Reflowduino is actually working
-#define T_preheat 50
-#define T_soak 80
-#define T_reflow 100
+//#define T_preheat 50
+//#define T_soak 80
+//#define T_reflow 100
 
-#define T_cool 30 // Temperature at which the board is "ready" (dinner bell sounds!)
+#define T_cool 40 // Safe temperature at which the board is "ready" (dinner bell sounds!)
 #define preheat_rate 2 // Increase of 1-3 *C/s
 #define soak_rate 0.7 // Increase of 0.5-1 *C/s
 #define reflow_rate 2 // Increase of 1-3 *C/s
