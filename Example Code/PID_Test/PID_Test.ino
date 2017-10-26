@@ -11,6 +11,9 @@
  * the PID gains accordingly by evaluating parameters such as reponse time, overshoot, and steady-
  * state error which are explained in more detail on my Github tutorial.
  * 
+ * Note: From testing it was concluded that a subtraction factor may be the easiest and most
+ * effective solution for compensating for overshoot during the reflow phase.
+ * 
  * -----------------------------------------------------------------------------------------------
  * Credits: Special thanks to Brett Beauregard, author of the Arduino PID Library!
  * 
@@ -53,13 +56,16 @@ Adafruit_MAX31855 thermocouple(MAX_CS);
 // Define if you want to enable the keyboard feature to type data into Excel
 #define enableKeyboard false
 
-// Define a desired temperature in deg C
-#define desiredTemp 75
+// Define a subtraction constant to compensate for overshoot:
+#define T_const 5; // From testing, overshoot was about 5-6*C
 
-// Define PID parameters
+// Define a desired temperature in deg C
+#define desiredTemp 75 - T_const
+
+// Define PID parameters. Tune them to your taste!
 #define PID_sampleTime 1000
-#define Kp 200
-#define Ki 0.025
+#define Kp 150
+#define Ki 0
 #define Kd 100
 
 // Bluetooth app settings. Define which characters belong to which functions
@@ -153,8 +159,6 @@ void loop() {
         Keyboard.print((millis()-timer)/1000); // Convert elapsed time from ms to s
         Keyboard.print('\t'); // Tab to go to next column
         Keyboard.print(temperature);
-        Keyboard.print('\t');
-        Keyboard.print(digitalRead(relay)); // Record the relay state as well!
         Keyboard.println('\n'); // Jump to new row
       }
     }
