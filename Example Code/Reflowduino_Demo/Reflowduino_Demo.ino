@@ -69,9 +69,9 @@ Adafruit_MAX31855 thermocouple(MAX_CS);
 //#define T_reflow 249
 
 // "Low-temp" lead-free solder paste (melting point around 138*C)
-#define T_preheat 90
-#define T_soak 138
-#define T_reflow 165
+//#define T_preheat 90
+//#define T_soak 138
+//#define T_reflow 165
 
 // Test values to make sure your Reflowduino is actually working
 //#define T_preheat 50
@@ -84,16 +84,17 @@ Adafruit_MAX31855 thermocouple(MAX_CS);
 #define reflow_rate 2 // Increase of 1-3 *C/s
 #define cool_rate -4 // Decrease of < 6 *C/s max to prevent thermal shock. Negative sign indicates decrease
 
-// Define PID parameters
-#define PID_sampleTime 1000
+// Define PID parameters. The gains depend on your particular setup
+// but these values should be good enough to get you started
+#define PID_sampleTime 1000 // 1000ms = 1s
 // Preheat phase
 #define Kp_preheat 100
 #define Ki_preheat 0.025
 #define Kd_preheat 20
 // Soak phase
-#define Kp_soak 300
+#define Kp_soak 200
 #define Ki_soak 0.05
-#define Kd_soak 250
+#define Kd_soak 300
 // Reflow phase
 #define Kp_reflow 300
 #define Ki_reflow 0.05
@@ -185,7 +186,7 @@ void loop() {
     // Perform a linear extrapolation of what desired temperature we want to be at.
     /********************* PREHEAT *********************/
     if (!preheatComplete) {
-      if (temperature > T_preheat) { // Check if the current phase was just completed
+      if (temperature >= T_preheat) { // Check if the current phase was just completed
         preheatComplete = true;
         t_start = millis(); // Reset timer for next phase
         Serial.println("Preheat phase complete!");
@@ -199,7 +200,7 @@ void loop() {
     }
     /********************* SOAK *********************/
     else if (!soakComplete) {
-      if (temperature > T_soak) {
+      if (temperature >= T_soak) {
         soakComplete = true;
         t_start = millis();
         Serial.println("Soaking phase complete!");
@@ -211,7 +212,7 @@ void loop() {
     }
     /********************* REFLOW *********************/
     else if (!reflowComplete) {
-      if (temperature > T_reflow) {
+      if (temperature >= T_reflow) {
         reflowComplete = true;
         t_start = millis();
         Serial.println("Reflow phase complete!");
@@ -223,7 +224,7 @@ void loop() {
     }
     /********************* COOLDOWN *********************/
     else if (!coolComplete) {
-      if (temperature < T_cool) {
+      if (temperature =< T_cool) {
         coolComplete = true;
         reflow = false;
         Serial.println("PCB reflow complete!");
