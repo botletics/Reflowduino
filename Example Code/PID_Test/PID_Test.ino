@@ -54,13 +54,13 @@ Adafruit_MAX31855 thermocouple(MAX_CS);
 #define enableKeyboard false
 
 // Define a desired temperature in deg C
-#define desiredTemp 50
+#define desiredTemp 75
 
 // Define PID parameters
 #define PID_sampleTime 1000
-#define Kp_preheat 50
-#define Ki_preheat 0.05
-#define Kd_preheat 20
+#define Kp 200
+#define Ki 0.025
+#define Kd 100
 
 // Bluetooth app settings. Define which characters belong to which functions
 #define dataChar '*' // App is receiving data from Reflowduino
@@ -69,17 +69,12 @@ Adafruit_MAX31855 thermocouple(MAX_CS);
 #define stopReflow 'S' // Command from app to "stop" reflow process at any time
 
 double temperature, output, setPoint; // Input, output, set point
-PID myPID(&temperature, &output, &setPoint, Kp_preheat, Ki_preheat, Kd_preheat, DIRECT);
+PID myPID(&temperature, &output, &setPoint, Kp, Ki, Kd, DIRECT);
 
 // Logic flags
 bool justStarted = true;
 bool reflow = false; // Baking process is underway!
-bool preheatComplete = false;
-bool soakComplete = false;
-bool reflowComplete = false;
-bool coolComplete = false;
 
-double T_start; // Starting temperature before reflow process
 int windowSize = 2000;
 unsigned long sendRate = 2000; // Send data to app every 2s
 unsigned long previousMillis = 0;
