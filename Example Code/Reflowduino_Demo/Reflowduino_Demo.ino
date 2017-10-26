@@ -244,7 +244,8 @@ void loop() {
     // Compute PID output (from 0 to windowSize) and control relay accordingly
     myPID.Compute(); // This will only be evaluated at the PID sampling rate
     if (millis() - windowStartTime >= windowSize) windowStartTime += windowSize; // Shift the time window
-    if (output > millis() - windowStartTime) digitalWrite(relay, HIGH);
+    if (output > millis() - windowStartTime) digitalWrite(relay, HIGH); // If HIGH turns on the relay
+//    if (output < millis() - windowStartTime) digitalWrite(relay, HIGH); // If LOW turns on the relay
     else digitalWrite(relay, LOW);
   }
   else digitalWrite(LED, LOW);
