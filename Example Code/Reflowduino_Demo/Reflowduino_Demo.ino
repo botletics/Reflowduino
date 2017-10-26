@@ -269,8 +269,6 @@ void loop() {
         Keyboard.print((millis()-timer)/1000); // Convert elapsed time from ms to s
         Keyboard.print('\t'); // Tab to go to next column
         Keyboard.print(temperature);
-        Keyboard.print('\t');
-        Keyboard.print(digitalRead(relay)); // Record the relay state as well!
         Keyboard.println('\n'); // Jump to new row
       }
     }
