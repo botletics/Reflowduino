@@ -63,20 +63,23 @@ Adafruit_MAX31855 thermocouple(MAX_CS);
 #define enableKeyboard false
 
 // Define reflow temperature profile parameters (in *C)
+// First define a subtraction constant to compensate for overshoot:
+#define T_const = 5; // From testing, overshoot was about 5-6*C
+
 // Standard lead-free solder paste (melting point around 215*C)
 //#define T_preheat 150
 //#define T_soak 217
-//#define T_reflow 249
+//#define T_reflow 249 - T_const
 
 // "Low-temp" lead-free solder paste (melting point around 138*C)
 //#define T_preheat 90
 //#define T_soak 138
-//#define T_reflow 165
+//#define T_reflow 165 - T_const
 
 // Test values to make sure your Reflowduino is actually working
 //#define T_preheat 50
 //#define T_soak 80
-//#define T_reflow 100
+//#define T_reflow 100 - T_const
 
 #define T_cool 40 // Safe temperature at which the board is "ready" (dinner bell sounds!)
 #define preheat_rate 2 // Increase of 1-3 *C/s
@@ -88,9 +91,9 @@ Adafruit_MAX31855 thermocouple(MAX_CS);
 // but these values should be good enough to get you started
 #define PID_sampleTime 1000 // 1000ms = 1s
 // Preheat phase
-#define Kp_preheat 100
-#define Ki_preheat 0.025
-#define Kd_preheat 20
+#define Kp_preheat 150
+#define Ki_preheat 0
+#define Kd_preheat 100
 // Soak phase
 #define Kp_soak 200
 #define Ki_soak 0.05
