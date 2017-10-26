@@ -64,7 +64,7 @@ Adafruit_MAX31855 thermocouple(MAX_CS);
 
 // Define reflow temperature profile parameters (in *C)
 // First define a subtraction constant to compensate for overshoot:
-#define T_const = 5; // From testing, overshoot was about 5-6*C
+#define T_const 5 // From testing, overshoot was about 5-6*C
 
 // Standard lead-free solder paste (melting point around 215*C)
 //#define T_preheat 150
