@@ -2,7 +2,7 @@
  * Title: Reflowduino Demo
  * Author: Timothy Woo
  * Website: www.botletics.com
- * Last modified: 10/25/2017
+ * Last modified: 10/29/2017
  * 
  * -----------------------------------------------------------------------------------------------
  * This is an example sketch for the Reflowduino reflow oven controller board. The default
@@ -227,7 +227,7 @@ void loop() {
     }
     /********************* COOLDOWN *********************/
     else if (!coolComplete) {
-      if (temperature =< T_cool) {
+      if (temperature <= T_cool) {
         coolComplete = true;
         reflow = false;
         Serial.println("PCB reflow complete!");
