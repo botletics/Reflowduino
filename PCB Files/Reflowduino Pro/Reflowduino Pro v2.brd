@@ -1086,7 +1086,7 @@ chip</description>
 <rectangle x1="-4.064" y1="-0.254" x2="-3.556" y2="0.254" layer="51"/>
 <rectangle x1="-6.604" y1="-0.254" x2="-6.096" y2="0.254" layer="51"/>
 </package>
-<package name="USB-B-MICRO-SMD-V2" urn="urn:adsk.eagle:footprint:500900/1" library_version="4" library_locally_modified="yes">
+<package name="USB-B-MICRO-SMD" urn="urn:adsk.eagle:footprint:500891/1" locally_modified="yes" library_version="5" library_locally_modified="yes">
 <text x="-4.66" y="5.96" size="0.3048" layer="51">PCB Edge</text>
 <text x="-1.27" y="5.969" size="0.4064" layer="25" font="vector" ratio="16">&gt;NAME</text>
 <text x="-1.27" y="5.461" size="0.4064" layer="27" font="vector" ratio="16">&gt;VALUE</text>
@@ -1097,25 +1097,30 @@ chip</description>
 <wire x1="2.85" y1="3.9" x2="2.85" y2="-3.9" width="0.127" layer="51"/>
 <wire x1="2.85" y1="3.9" x2="-2.15" y2="3.9" width="0.127" layer="51"/>
 <wire x1="2.85" y1="-3.9" x2="-2.15" y2="-3.9" width="0.127" layer="51"/>
-<wire x1="2.981959375" y1="3.99288125" x2="1.75" y2="3.99288125" width="0.3048" layer="21"/>
-<wire x1="1.75" y1="3.99288125" x2="2" y2="4" width="0.3048" layer="21"/>
-<wire x1="3" y1="4" x2="3" y2="2.75" width="0.3048" layer="21"/>
-<wire x1="1.75" y1="-4" x2="3" y2="-4" width="0.3048" layer="21"/>
-<wire x1="3" y1="-4" x2="3" y2="-2.75" width="0.3048" layer="21"/>
-<wire x1="-1.25" y1="4" x2="-2" y2="4" width="0.3048" layer="21"/>
-<wire x1="-1.25" y1="-4" x2="-2" y2="-4" width="0.3048" layer="21"/>
+<wire x1="2.981959375" y1="3.99288125" x2="2" y2="3.99288125" width="0.3048" layer="21"/>
+<wire x1="2" y1="3.99288125" x2="2" y2="4" width="0.3048" layer="21"/>
+<wire x1="3" y1="4" x2="3" y2="3" width="0.3048" layer="21"/>
+<wire x1="2" y1="-4" x2="3" y2="-4" width="0.3048" layer="21"/>
+<wire x1="3" y1="-4" x2="3" y2="-3" width="0.3048" layer="21"/>
+<wire x1="-1" y1="4" x2="-2" y2="4" width="0.3048" layer="21"/>
+<wire x1="-1" y1="-4" x2="-2" y2="-4" width="0.3048" layer="21"/>
 <wire x1="-2" y1="6.35" x2="-2" y2="-6.35" width="0" layer="51"/>
 <smd name="D+" x="2.725" y="0" dx="0.4" dy="1.45" layer="1" rot="R90"/>
 <smd name="D-" x="2.725" y="0.65" dx="0.4" dy="1.45" layer="1" rot="R90"/>
 <smd name="VBUS" x="2.725" y="1.3" dx="0.4" dy="1.45" layer="1" rot="R90"/>
 <smd name="ID" x="2.725" y="-0.65" dx="0.4" dy="1.45" layer="1" rot="R90"/>
 <smd name="GND" x="2.725" y="-1.3" dx="0.4" dy="1.45" layer="1" rot="R90"/>
-<smd name="SHIELD1" x="0" y="3.685" dx="1.9" dy="1.9" layer="1" rot="R90"/>
-<smd name="SHIELD3" x="0" y="0" dx="2.75" dy="1.9" layer="1" rot="R90" cream="no"/>
-<smd name="SHIELD2" x="0" y="-3.685" dx="1.9" dy="1.9" layer="1" rot="R90"/>
-<hole x="2.2" y="1.9" drill="0.85"/>
-<hole x="2.2" y="-1.9" drill="0.85"/>
-<rectangle x1="-0.65" y1="-1" x2="0.65" y2="1" layer="31"/>
+<smd name="SHIELD1" x="0" y="3.685" dx="1.8" dy="1.5" layer="1" rot="R90" stop="no" cream="no"/>
+<smd name="SHIELD3" x="0" y="0" dx="2.5" dy="1.5" layer="1" rot="R90" stop="no" cream="no"/>
+<smd name="SHIELD2" x="0" y="-3.685" dx="1.8" dy="1.5" layer="1" rot="R90" stop="no" cream="no"/>
+<hole x="2.2" y="2" drill="0.5"/>
+<hole x="2.2" y="-2" drill="0.5"/>
+<rectangle x1="-0.75" y1="2.784" x2="0.75" y2="4.584" layer="31"/>
+<rectangle x1="-0.35" y1="-0.75" x2="0.35" y2="0.75" layer="31"/>
+<rectangle x1="-0.75" y1="-4.584" x2="0.75" y2="-2.784" layer="31"/>
+<rectangle x1="-0.85" y1="2.684" x2="0.85" y2="4.684" layer="29"/>
+<rectangle x1="-0.85" y1="-4.684" x2="0.85" y2="-2.684" layer="29"/>
+<rectangle x1="-0.85" y1="-1.35" x2="0.85" y2="1.35" layer="29"/>
 </package>
 <package name="2X3" urn="urn:adsk.eagle:footprint:500967/1" library_version="4" library_locally_modified="yes">
 <wire x1="-3.81" y1="-1.905" x2="-3.175" y2="-2.54" width="0.2032" layer="21"/>
@@ -1190,7 +1195,7 @@ chip</description>
 </package3d>
 <package3d name="1X10" urn="urn:adsk.eagle:package:501492/2" type="model" library_version="4" library_locally_modified="yes">
 </package3d>
-<package3d name="USB-B-MICRO-SMD-V2" urn="urn:adsk.eagle:package:501328/2" type="model" library_version="4" library_locally_modified="yes">
+<package3d name="USB-B-MICRO-SMD" urn="urn:adsk.eagle:package:501330/2" type="model" library_version="4" library_locally_modified="yes">
 </package3d>
 <package3d name="2X3" urn="urn:adsk.eagle:package:501392/2" type="model" library_version="4" library_locally_modified="yes">
 </package3d>
@@ -1500,7 +1505,7 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="NAME" x="20.574" y="16.1925" size="0.8128" layer="25" font="vector" ratio="16"/>
 <attribute name="VALUE" x="20.8915" y="16.7005" size="0.8128" layer="27" ratio="13"/>
 </element>
-<element name="J1" library="TimWoo-Connectors" library_urn="urn:adsk.eagle:library:500889" package="USB-B-MICRO-SMD-V2" package3d_urn="urn:adsk.eagle:package:501328/2" value="microUSB" x="2.032" y="37.7825" smashed="yes">
+<element name="J1" library="TimWoo-Connectors" library_urn="urn:adsk.eagle:library:500889" package="USB-B-MICRO-SMD" package3d_urn="urn:adsk.eagle:package:501330/2" value="microUSB" x="2.032" y="37.7825" smashed="yes">
 <attribute name="NAME" x="0.762" y="35.4965" size="0.8128" layer="25" font="vector" ratio="16"/>
 <attribute name="VALUE" x="0.762" y="43.2435" size="0.8128" layer="27"/>
 </element>
@@ -1718,7 +1723,7 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="D2" pad="C"/>
 <contactref element="R6" pad="1"/>
 <contactref element="JP1" pad="1"/>
-<wire x1="4.757" y1="36.4825" x2="6.0025" y2="36.4825" width="0.4064" layer="1"/>
+<wire x1="6.0025" y1="36.4825" x2="4.757" y2="36.4825" width="0.4064" layer="1"/>
 <wire x1="6.0025" y1="36.4825" x2="6.0325" y2="36.5125" width="0.4064" layer="1"/>
 <wire x1="30.48" y1="3.683" x2="30.48" y2="2.54" width="0.8128" layer="1"/>
 <wire x1="30.48" y1="2.54" x2="30.48" y2="1.27" width="0.8128" layer="1"/>
@@ -1781,6 +1786,8 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="IC2" pad="33"/>
 <wire x1="18.9865" y1="39.1405" x2="18.9865" y2="39.878" width="0.8128" layer="1"/>
 <wire x1="18.9865" y1="39.878" x2="18.034" y2="39.878" width="0.8128" layer="1"/>
+<wire x1="4.757" y1="36.4825" x2="3.6495" y2="36.4825" width="0.4064" layer="1"/>
+<wire x1="3.6495" y1="36.4825" x2="3.556" y2="36.576" width="0.4064" layer="1"/>
 </signal>
 <signal name="V_USB" class="1">
 <contactref element="J3" pad="4"/>
@@ -3374,6 +3381,9 @@ Please make sure your boards conform to these design rules.</description>
 <approved hash="19 1 e6d945bc8399e0eb"/>
 <approved hash="19 1 64f0918152336755"/>
 <approved hash="19 1 6a81c49a6f8866a4"/>
+<approved hash="4	1	141e395ea2e736bc"/>
+<approved hash="4	1	2809744f26b00d1a"/>
+<approved hash="4	1	b175889baf98d589"/>
 </errors>
 </board>
 </drawing>
