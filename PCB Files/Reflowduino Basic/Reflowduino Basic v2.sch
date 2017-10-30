@@ -6267,38 +6267,7 @@ Used on FTDI breakouts</description>
 <text x="-5.08" y="4.225" size="0.8128" layer="25" font="vector" ratio="16">&gt;NAME</text>
 <text x="-5.08" y="-3.395" size="0.8128" layer="27" font="vector" ratio="16">&gt;VALUE</text>
 </package>
-<package name="USB-B-MICRO-SMD-V2" urn="urn:adsk.eagle:footprint:500900/1" library_version="4" library_locally_modified="yes">
-<text x="-4.66" y="5.96" size="0.3048" layer="51">PCB Edge</text>
-<text x="-1.27" y="5.969" size="0.4064" layer="25" font="vector" ratio="16">&gt;NAME</text>
-<text x="-1.27" y="5.461" size="0.4064" layer="27" font="vector" ratio="16">&gt;VALUE</text>
-<wire x1="-3" y1="5.6" x2="-2.3" y2="5.3" width="0.08" layer="51"/>
-<wire x1="-2.3" y1="5.3" x2="-2.4" y2="5.5" width="0.08" layer="51"/>
-<wire x1="-2.3" y1="5.3" x2="-2.5" y2="5.2" width="0.08" layer="51"/>
-<wire x1="-2.15" y1="3.9" x2="-2.15" y2="-3.9" width="0.127" layer="51"/>
-<wire x1="2.85" y1="3.9" x2="2.85" y2="-3.9" width="0.127" layer="51"/>
-<wire x1="2.85" y1="3.9" x2="-2.15" y2="3.9" width="0.127" layer="51"/>
-<wire x1="2.85" y1="-3.9" x2="-2.15" y2="-3.9" width="0.127" layer="51"/>
-<wire x1="2.981959375" y1="3.99288125" x2="1.75" y2="3.99288125" width="0.3048" layer="21"/>
-<wire x1="1.75" y1="3.99288125" x2="2" y2="4" width="0.3048" layer="21"/>
-<wire x1="3" y1="4" x2="3" y2="2.75" width="0.3048" layer="21"/>
-<wire x1="1.75" y1="-4" x2="3" y2="-4" width="0.3048" layer="21"/>
-<wire x1="3" y1="-4" x2="3" y2="-2.75" width="0.3048" layer="21"/>
-<wire x1="-1.25" y1="4" x2="-2" y2="4" width="0.3048" layer="21"/>
-<wire x1="-1.25" y1="-4" x2="-2" y2="-4" width="0.3048" layer="21"/>
-<wire x1="-2" y1="6.35" x2="-2" y2="-6.35" width="0" layer="51"/>
-<smd name="D+" x="2.725" y="0" dx="0.4" dy="1.45" layer="1" rot="R90"/>
-<smd name="D-" x="2.725" y="0.65" dx="0.4" dy="1.45" layer="1" rot="R90"/>
-<smd name="VBUS" x="2.725" y="1.3" dx="0.4" dy="1.45" layer="1" rot="R90"/>
-<smd name="ID" x="2.725" y="-0.65" dx="0.4" dy="1.45" layer="1" rot="R90"/>
-<smd name="GND" x="2.725" y="-1.3" dx="0.4" dy="1.45" layer="1" rot="R90"/>
-<smd name="SHIELD1" x="0" y="3.685" dx="1.9" dy="1.9" layer="1" rot="R90"/>
-<smd name="SHIELD3" x="0" y="0" dx="2.75" dy="1.9" layer="1" rot="R90" cream="no"/>
-<smd name="SHIELD2" x="0" y="-3.685" dx="1.9" dy="1.9" layer="1" rot="R90"/>
-<hole x="2.2" y="1.9" drill="0.85"/>
-<hole x="2.2" y="-1.9" drill="0.85"/>
-<rectangle x1="-0.65" y1="-1" x2="0.65" y2="1" layer="31"/>
-</package>
-<package name="USB-B-MICRO-SMD" urn="urn:adsk.eagle:footprint:500891/1" library_version="4" library_locally_modified="yes">
+<package name="USB-B-MICRO-SMD" urn="urn:adsk.eagle:footprint:500891/1" locally_modified="yes" library_version="5" library_locally_modified="yes">
 <text x="-4.66" y="5.96" size="0.3048" layer="51">PCB Edge</text>
 <text x="-1.27" y="5.969" size="0.4064" layer="25" font="vector" ratio="16">&gt;NAME</text>
 <text x="-1.27" y="5.461" size="0.4064" layer="27" font="vector" ratio="16">&gt;VALUE</text>
@@ -6325,8 +6294,8 @@ Used on FTDI breakouts</description>
 <smd name="SHIELD1" x="0" y="3.685" dx="1.8" dy="1.5" layer="1" rot="R90" stop="no" cream="no"/>
 <smd name="SHIELD3" x="0" y="0" dx="2.5" dy="1.5" layer="1" rot="R90" stop="no" cream="no"/>
 <smd name="SHIELD2" x="0" y="-3.685" dx="1.8" dy="1.5" layer="1" rot="R90" stop="no" cream="no"/>
-<hole x="2.2" y="1.9" drill="0.85"/>
-<hole x="2.2" y="-1.9" drill="0.85"/>
+<hole x="2.2" y="2" drill="0.5"/>
+<hole x="2.2" y="-2" drill="0.5"/>
 <rectangle x1="-0.75" y1="2.784" x2="0.75" y2="4.584" layer="31"/>
 <rectangle x1="-0.35" y1="-0.75" x2="0.35" y2="0.75" layer="31"/>
 <rectangle x1="-0.75" y1="-4.584" x2="0.75" y2="-2.784" layer="31"/>
@@ -6766,8 +6735,6 @@ Used on FTDI breakouts</description>
 <package3d name="1X10" urn="urn:adsk.eagle:package:501492/2" type="model" library_version="4" library_locally_modified="yes">
 </package3d>
 <package3d name="1X06" urn="urn:adsk.eagle:package:501437/2" type="model" library_version="4" library_locally_modified="yes">
-</package3d>
-<package3d name="USB-B-MICRO-SMD-V2" urn="urn:adsk.eagle:package:501328/2" type="model" library_version="4" library_locally_modified="yes">
 </package3d>
 <package3d name="USB-B-MICRO-SMD" urn="urn:adsk.eagle:package:501330/2" type="model" library_version="4" library_locally_modified="yes">
 </package3d>
@@ -7856,7 +7823,7 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 </device>
 </devices>
 </deviceset>
-<deviceset name="MICRO-USB_SMD_NOSHIELD" urn="urn:adsk.eagle:component:501671/3" prefix="J" uservalue="yes" library_version="4" library_locally_modified="yes">
+<deviceset name="MICRO-USB_SMD_NOSHIELD" urn="urn:adsk.eagle:component:501671/3" locally_modified="yes" prefix="J" uservalue="yes" library_version="5" library_locally_modified="yes">
 <gates>
 <gate name="G$1" symbol="USB-MICROB-NOSHIELD" x="0" y="0"/>
 </gates>
@@ -7871,21 +7838,6 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 </connects>
 <package3dinstances>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:501330/2"/>
-</package3dinstances>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="V2" package="USB-B-MICRO-SMD-V2">
-<connects>
-<connect gate="G$1" pin="D+" pad="D+"/>
-<connect gate="G$1" pin="D-" pad="D-"/>
-<connect gate="G$1" pin="GND" pad="GND SHIELD1 SHIELD2 SHIELD3"/>
-<connect gate="G$1" pin="USBID" pad="ID"/>
-<connect gate="G$1" pin="VBUS" pad="VBUS"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:501328/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -8281,7 +8233,7 @@ Pogo pins- HW-11044</description>
 <part name="Q1" library="TimWoo-MOSFETs" library_urn="urn:adsk.eagle:library:501962" deviceset="MOSFET-N" device="GENERIC" package3d_urn="urn:adsk.eagle:package:501973/2" value="NMOS"/>
 <part name="GND26" library="TimWoo-Aesthetics" library_urn="urn:adsk.eagle:library:502097" deviceset="GND" device=""/>
 <part name="IC2" library="TimWoo-IC" library_urn="urn:adsk.eagle:library:500796" deviceset="ATMEGA32U4" device="-AU" package3d_urn="urn:adsk.eagle:package:500858/2" value="ATMEGA32U4"/>
-<part name="J1" library="TimWoo-Connectors" library_urn="urn:adsk.eagle:library:500889" deviceset="MICRO-USB_SMD_NOSHIELD" device="V2" package3d_urn="urn:adsk.eagle:package:501328/2" value="microUSB"/>
+<part name="J1" library="TimWoo-Connectors" library_urn="urn:adsk.eagle:library:500889" deviceset="MICRO-USB_SMD_NOSHIELD" device="V1" package3d_urn="urn:adsk.eagle:package:501330/2" value="microUSB"/>
 <part name="SUPPLY4" library="TimWoo-Aesthetics" library_urn="urn:adsk.eagle:library:502097" deviceset="V_USB" device=""/>
 <part name="IC3" library="TimWoo-IC" library_urn="urn:adsk.eagle:library:500796" deviceset="VOLTAGE-REGULATOR_SOT23-5" device="SOT-23-5" package3d_urn="urn:adsk.eagle:package:500846/2" value="AP2112K-3.3TRG1"/>
 <part name="SUPPLY9" library="TimWoo-Aesthetics" library_urn="urn:adsk.eagle:library:502097" deviceset="V_USB" device=""/>
