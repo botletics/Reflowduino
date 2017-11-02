@@ -3,7 +3,7 @@
 The Reflowduino is an all-in-one Arduino-compatible controller board that can easily transform a toaster oven into a reflow oven for much less the price! It sports a versatile ATmega32u4 microprocessor with a ubiquitous micro USB programming interface, an integrated MAX31855 K-type thermocouple interface with noise filtering, Bluetooth Low Energy (BLE 4.0) for easy communication with a mobile device, LiPo battery charging and status indication, an optional solid-state relay, and a piezo buzzer for playing your favorite Star Wars theme song.
 Better yet, all of this is completely open-source for all to enjoy, including EAGLE PCB files, Arduino IDE example code, sample Android app for Bluetooth control, and a full tutorial on how to modify a toaster oven to start cookin’!
 
-Order your own Reflowduino board [here](https://www.botletics.com/products/reflowduino)!
+Order your own Reflowduino board [here](https://www.botletics.com/products)!
 Also, don’t forget to check out the [comprehensive Github wiki](https://github.com/botletics/Reflowdiuno/wiki)!
 I also posted [this Instructable](https://www.instructables.com/id/Reflowduino-DIY-BLE-Reflow-Oven-Controller/) as a quick 'n dirty summary of everything here!
 
