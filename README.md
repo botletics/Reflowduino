@@ -5,7 +5,7 @@ Better yet, all of this is completely open-source for all to enjoy, including EA
 
 Order your own Reflowduino board [here](https://www.botletics.com/products)!
 Also, don’t forget to check out the [comprehensive Github wiki](https://github.com/botletics/Reflowdiuno/wiki)!
-I also posted [this Instructable](https://www.instructables.com/id/Reflowduino-DIY-BLE-Reflow-Oven-Controller/) as a quick 'n dirty summary of everything here!
+I also posted [this Instructable](https://www.instructables.com/id/Reflowduino-DIY-BLE-Reflow-Oven-Controller/) as a quick 'n dirty summary of everything here as well as on [Hackster.io](https://www.hackster.io/botletics/diy-reflow-oven-with-reflowduino-af0219)!
 
 All PCB design files and hardware are released under the [Creative Commons Attribution Share Alike 4.0](https://choosealicense.com/licenses/cc-by-sa-4.0/) license.
 
