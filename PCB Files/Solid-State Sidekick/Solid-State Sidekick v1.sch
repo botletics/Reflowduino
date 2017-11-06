@@ -622,9 +622,9 @@ part number 2062-2P from STA</description>
 <description>&lt;a href=https://www.digikey.com/product-detail/en/te-connectivity-amp-connectors/3-213598-2/3-213598-2-ND/1892746&gt;NEMA AC Receptacle&lt;/a&gt;</description>
 <text x="-6.35" y="16.51" size="1.27" layer="25" font="vector" ratio="16">&gt;NAME</text>
 <text x="-6.35" y="-17.78" size="1.27" layer="27" font="vector" ratio="16">&gt;VALUE</text>
-<pad name="GND" x="0" y="0" drill="2.47" diameter="4"/>
-<pad name="L" x="6.35" y="4.19" drill="2.47" diameter="4"/>
-<pad name="N" x="-6.35" y="4.19" drill="2.47" diameter="4"/>
+<pad name="GND" x="0" y="-3.38" drill="2.47" diameter="4"/>
+<pad name="L" x="6.35" y="0.81" drill="2.47" diameter="4"/>
+<pad name="N" x="-6.35" y="0.81" drill="2.47" diameter="4"/>
 <wire x1="-12.75" y1="12.75" x2="12.75" y2="12.75" width="0.254" layer="51"/>
 <wire x1="12.75" y1="12.75" x2="12.75" y2="-12.75" width="0.254" layer="51"/>
 <wire x1="12.75" y1="-12.75" x2="-12.75" y2="-12.75" width="0.254" layer="51"/>
