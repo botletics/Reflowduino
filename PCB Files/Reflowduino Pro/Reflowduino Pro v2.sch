@@ -3948,7 +3948,7 @@ Example (2.5mm Height)</description>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="LED" urn="urn:adsk.eagle:component:502016/6" prefix="D" uservalue="yes" library_version="2">
+<deviceset name="LED" urn="urn:adsk.eagle:component:502016/6" locally_modified="yes" prefix="LED" uservalue="yes" library_version="2" library_locally_modified="yes">
 <description>&lt;b&gt;LEDs&lt;/b&gt;
 Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LEDs. 5mm - Spark Fun Electronics SKU : COM-00529 (and others)</description>
 <gates>
@@ -12505,8 +12505,8 @@ OSHW_LOGO</description>
 <part name="C8" library="TimWoo-Capacitors" library_urn="urn:adsk.eagle:library:500759" deviceset="CAP" device="MARKED-0603" package3d_urn="urn:adsk.eagle:package:500792/2" value="0.1uF"/>
 <part name="SUPPLY16" library="TimWoo-Aesthetics" library_urn="urn:adsk.eagle:library:502097" deviceset="3.3V" device=""/>
 <part name="GND22" library="TimWoo-Aesthetics" library_urn="urn:adsk.eagle:library:502097" deviceset="GND" device=""/>
-<part name="D1" library="TimWoo-LED" library_urn="urn:adsk.eagle:library:501982" deviceset="LED" device="0603-MARKED" package3d_urn="urn:adsk.eagle:package:502010/2" value="Green"/>
-<part name="D3" library="TimWoo-LED" library_urn="urn:adsk.eagle:library:501982" deviceset="LED" device="0603-MARKED" package3d_urn="urn:adsk.eagle:package:502010/2" value="Red"/>
+<part name="LED1" library="TimWoo-LED" library_urn="urn:adsk.eagle:library:501982" deviceset="LED" device="0603-MARKED" package3d_urn="urn:adsk.eagle:package:502010/2" value="Green"/>
+<part name="LED3" library="TimWoo-LED" library_urn="urn:adsk.eagle:library:501982" deviceset="LED" device="0603-MARKED" package3d_urn="urn:adsk.eagle:package:502010/2" value="Red"/>
 <part name="R1" library="TimWoo-Resistors" library_urn="urn:adsk.eagle:library:500711" deviceset="RESISTOR" device="MARKED-0603" package3d_urn="urn:adsk.eagle:package:500751/2" value="2k"/>
 <part name="R8" library="TimWoo-Resistors" library_urn="urn:adsk.eagle:library:500711" deviceset="RESISTOR" device="MARKED-0603" package3d_urn="urn:adsk.eagle:package:500751/2" value="470"/>
 <part name="L1" library="Seeed-Inductor" library_urn="urn:adsk.eagle:library:471" deviceset="SMD-FERRITE-CHIP-120-OHM-500MA(0603)" device="" package3d_urn="urn:adsk.eagle:package:32723/1" value="Ferrite"/>
@@ -12523,7 +12523,7 @@ OSHW_LOGO</description>
 <part name="J4" library="TimWoo-Connectors" library_urn="urn:adsk.eagle:library:500889" deviceset="M06" device="SILK_FEMALE_PTH" package3d_urn="urn:adsk.eagle:package:501437/2"/>
 <part name="U1" library="TimWoo-RF" library_urn="urn:adsk.eagle:library:527286" deviceset="HM-11_JDY-08_BLUETOOTH" device="" value="HM-11 Bluetooth"/>
 <part name="R11" library="TimWoo-Resistors" library_urn="urn:adsk.eagle:library:500711" deviceset="RESISTOR" device="MARKED-0603" package3d_urn="urn:adsk.eagle:package:500751/2" value="470"/>
-<part name="D5" library="TimWoo-LED" library_urn="urn:adsk.eagle:library:501982" deviceset="LED" device="0603-MARKED" package3d_urn="urn:adsk.eagle:package:502010/2" value="Blue"/>
+<part name="LED4" library="TimWoo-LED" library_urn="urn:adsk.eagle:library:501982" deviceset="LED" device="0603-MARKED" package3d_urn="urn:adsk.eagle:package:502010/2" value="Blue"/>
 <part name="GND29" library="TimWoo-Aesthetics" library_urn="urn:adsk.eagle:library:502097" deviceset="GND" device=""/>
 <part name="GND28" library="TimWoo-Aesthetics" library_urn="urn:adsk.eagle:library:502097" deviceset="GND" device=""/>
 <part name="GND27" library="TimWoo-Aesthetics" library_urn="urn:adsk.eagle:library:502097" deviceset="GND" device=""/>
@@ -12552,13 +12552,13 @@ OSHW_LOGO</description>
 <part name="C1" library="TimWoo-Capacitors" library_urn="urn:adsk.eagle:library:500759" deviceset="CAP" device="MARKED-0603" package3d_urn="urn:adsk.eagle:package:500792/2" value="4.7uF"/>
 <part name="C5" library="TimWoo-Capacitors" library_urn="urn:adsk.eagle:library:500759" deviceset="CAP" device="MARKED-0603" package3d_urn="urn:adsk.eagle:package:500792/2" value="4.7uF"/>
 <part name="J2" library="TimWoo-Connectors" deviceset="M02" device="-JST-2MM-SMT" value="LiPo Battery"/>
-<part name="D2" library="TimWoo-LED" library_urn="urn:adsk.eagle:library:501982" deviceset="LED" device="0603-MARKED" package3d_urn="urn:adsk.eagle:package:502010/2" value="Green"/>
+<part name="LED2" library="TimWoo-LED" library_urn="urn:adsk.eagle:library:501982" deviceset="LED" device="0603-MARKED" package3d_urn="urn:adsk.eagle:package:502010/2" value="Green"/>
 <part name="GND8" library="SparkFun" deviceset="GND" device=""/>
 <part name="R3" library="TimWoo-Resistors" library_urn="urn:adsk.eagle:library:500711" deviceset="RESISTOR" device="MARKED-0603" package3d_urn="urn:adsk.eagle:package:500751/2" value="2k"/>
 <part name="SUPPLY2" library="TimWoo-Aesthetics" library_urn="urn:adsk.eagle:library:502097" deviceset="V_USB" device=""/>
 <part name="R7" library="TimWoo-Resistors" library_urn="urn:adsk.eagle:library:500711" deviceset="RESISTOR" device="MARKED-0603" package3d_urn="urn:adsk.eagle:package:500751/2" value="4.02k"/>
 <part name="JP1" library="TimWoo-Connectors" deviceset="JUMPER-SMT_2_NO" device="_SILK" value="500mA"/>
-<part name="D4" library="TimWoo-Diodes" library_urn="urn:adsk.eagle:library:501758" deviceset="DIODE-SCHOTTKY" device="SOD-123FL" package3d_urn="urn:adsk.eagle:package:501788/2" value="MBR120"/>
+<part name="D1" library="TimWoo-Diodes" library_urn="urn:adsk.eagle:library:501758" deviceset="DIODE-SCHOTTKY" device="SOD-123FL" package3d_urn="urn:adsk.eagle:package:501788/2" value="MBR120"/>
 <part name="SUPPLY8" library="TimWoo-Aesthetics" library_urn="urn:adsk.eagle:library:502097" deviceset="VBAT" device=""/>
 <part name="SUPPLY10" library="TimWoo-Aesthetics" library_urn="urn:adsk.eagle:library:502097" deviceset="VBAT" device=""/>
 <part name="J9" library="TimWoo-Connectors" deviceset="M01" device="PTH_LONGPAD" value="RLY+"/>
@@ -12718,8 +12718,8 @@ disable buzzer</text>
 <instance part="C8" gate="G$1" x="271.78" y="71.12"/>
 <instance part="SUPPLY16" gate="G$1" x="271.78" y="78.74"/>
 <instance part="GND22" gate="1" x="271.78" y="63.5"/>
-<instance part="D1" gate="G$1" x="17.78" y="142.24"/>
-<instance part="D3" gate="G$1" x="157.48" y="200.66" rot="R90"/>
+<instance part="LED1" gate="G$1" x="17.78" y="142.24"/>
+<instance part="LED3" gate="G$1" x="157.48" y="200.66" rot="R90"/>
 <instance part="R1" gate="G$1" x="17.78" y="152.4" rot="R270"/>
 <instance part="R8" gate="G$1" x="147.32" y="200.66"/>
 <instance part="L1" gate="L" x="269.24" y="55.88"/>
@@ -12736,7 +12736,7 @@ disable buzzer</text>
 <instance part="J4" gate="G$1" x="223.52" y="170.18" rot="MR0"/>
 <instance part="U1" gate="G$1" x="381" y="228.6"/>
 <instance part="R11" gate="G$1" x="403.86" y="220.98"/>
-<instance part="D5" gate="G$1" x="411.48" y="215.9"/>
+<instance part="LED4" gate="G$1" x="411.48" y="215.9"/>
 <instance part="GND29" gate="1" x="411.48" y="205.74"/>
 <instance part="GND28" gate="1" x="411.48" y="238.76" rot="R90"/>
 <instance part="GND27" gate="1" x="381" y="142.24"/>
@@ -12765,13 +12765,13 @@ disable buzzer</text>
 <instance part="C1" gate="G$1" x="25.4" y="48.26"/>
 <instance part="C5" gate="G$1" x="101.6" y="48.26"/>
 <instance part="J2" gate="G$1" x="121.92" y="55.88" rot="R180"/>
-<instance part="D2" gate="G$1" x="43.18" y="43.18"/>
+<instance part="LED2" gate="G$1" x="43.18" y="43.18"/>
 <instance part="GND8" gate="1" x="43.18" y="33.02"/>
 <instance part="R3" gate="G$1" x="50.8" y="50.8" rot="MR0"/>
 <instance part="SUPPLY2" gate="G$1" x="25.4" y="60.96"/>
 <instance part="R7" gate="G$1" x="93.98" y="40.64" rot="R90"/>
 <instance part="JP1" gate="G$1" x="93.98" y="27.94" rot="R90"/>
-<instance part="D4" gate="G$1" x="182.88" y="66.04" rot="R270"/>
+<instance part="D1" gate="G$1" x="182.88" y="66.04" rot="R270"/>
 <instance part="SUPPLY8" gate="G$1" x="101.6" y="60.96"/>
 <instance part="SUPPLY10" gate="G$1" x="182.88" y="71.12"/>
 <instance part="J9" gate="G$1" x="355.6" y="78.74"/>
@@ -12885,7 +12885,7 @@ disable buzzer</text>
 <wire x1="271.78" y1="68.58" x2="271.78" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="D1" gate="G$1" pin="C"/>
+<pinref part="LED1" gate="G$1" pin="C"/>
 <pinref part="GND1" gate="1" pin="GND"/>
 <wire x1="17.78" y1="137.16" x2="17.78" y2="134.62" width="0.1524" layer="91"/>
 </segment>
@@ -12896,13 +12896,13 @@ disable buzzer</text>
 <wire x1="254" y1="160.02" x2="251.46" y2="160.02" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="D3" gate="G$1" pin="C"/>
+<pinref part="LED3" gate="G$1" pin="C"/>
 <pinref part="GND16" gate="1" pin="GND"/>
 <wire x1="162.56" y1="200.66" x2="165.1" y2="200.66" width="0.1524" layer="91"/>
 <wire x1="165.1" y1="200.66" x2="165.1" y2="198.12" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="D5" gate="G$1" pin="C"/>
+<pinref part="LED4" gate="G$1" pin="C"/>
 <pinref part="GND29" gate="1" pin="GND"/>
 <wire x1="411.48" y1="210.82" x2="411.48" y2="208.28" width="0.1524" layer="91"/>
 </segment>
@@ -12950,7 +12950,7 @@ disable buzzer</text>
 <pinref part="J2" gate="G$1" pin="2"/>
 </segment>
 <segment>
-<pinref part="D2" gate="G$1" pin="C"/>
+<pinref part="LED2" gate="G$1" pin="C"/>
 <pinref part="GND8" gate="1" pin="GND"/>
 <wire x1="43.18" y1="38.1" x2="43.18" y2="35.56" width="0.1524" layer="91"/>
 </segment>
@@ -13026,7 +13026,7 @@ disable buzzer</text>
 <pinref part="IC3" gate="G$1" pin="EN"/>
 <wire x1="185.42" y1="53.34" x2="182.88" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="182.88" y1="53.34" x2="182.88" y2="55.88" width="0.1524" layer="91"/>
-<pinref part="D4" gate="G$1" pin="C"/>
+<pinref part="D1" gate="G$1" pin="C"/>
 <wire x1="182.88" y1="63.5" x2="182.88" y2="55.88" width="0.1524" layer="91"/>
 <junction x="182.88" y="55.88"/>
 <pinref part="C6" gate="G$1" pin="1"/>
@@ -13261,7 +13261,7 @@ disable buzzer</text>
 <net name="N$9" class="0">
 <segment>
 <pinref part="R1" gate="G$1" pin="2"/>
-<pinref part="D1" gate="G$1" pin="A"/>
+<pinref part="LED1" gate="G$1" pin="A"/>
 <wire x1="17.78" y1="147.32" x2="17.78" y2="144.78" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -13428,7 +13428,7 @@ disable buzzer</text>
 <net name="N$31" class="0">
 <segment>
 <pinref part="R8" gate="G$1" pin="2"/>
-<pinref part="D3" gate="G$1" pin="A"/>
+<pinref part="LED3" gate="G$1" pin="A"/>
 <wire x1="152.4" y1="200.66" x2="154.94" y2="200.66" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -13610,13 +13610,13 @@ disable buzzer</text>
 </segment>
 <segment>
 <pinref part="SUPPLY10" gate="G$1" pin="VBAT"/>
-<pinref part="D4" gate="G$1" pin="A"/>
+<pinref part="D1" gate="G$1" pin="A"/>
 <wire x1="182.88" y1="71.12" x2="182.88" y2="68.58" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$6" class="0">
 <segment>
-<pinref part="D2" gate="G$1" pin="A"/>
+<pinref part="LED2" gate="G$1" pin="A"/>
 <pinref part="R3" gate="G$1" pin="2"/>
 <wire x1="45.72" y1="50.8" x2="43.18" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="50.8" x2="43.18" y2="45.72" width="0.1524" layer="91"/>
@@ -13745,7 +13745,7 @@ disable buzzer</text>
 <net name="N$11" class="0">
 <segment>
 <pinref part="R11" gate="G$1" pin="2"/>
-<pinref part="D5" gate="G$1" pin="A"/>
+<pinref part="LED4" gate="G$1" pin="A"/>
 <wire x1="408.94" y1="220.98" x2="411.48" y2="220.98" width="0.1524" layer="91"/>
 <wire x1="411.48" y1="220.98" x2="411.48" y2="218.44" width="0.1524" layer="91"/>
 </segment>
