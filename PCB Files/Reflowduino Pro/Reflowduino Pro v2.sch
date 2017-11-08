@@ -3465,8 +3465,8 @@ IC-09995</description>
 <text x="-3.81" y="-6.35" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 <package name="RELAY_PF240" urn="urn:adsk.eagle:footprint:501888/1" locally_modified="yes" library_version="3" library_locally_modified="yes">
-<pad name="4" x="-13.97" y="0" drill="1.35" diameter="3.6"/>
-<pad name="3" x="-3.81" y="0" drill="1.35" diameter="3.6"/>
+<pad name="4" x="-13.97" y="0" drill="1.35" diameter="2.7"/>
+<pad name="3" x="-3.81" y="0" drill="1.35" diameter="2.7"/>
 <pad name="2" x="8.89" y="0" drill="1.35" diameter="2.5"/>
 <pad name="1" x="13.97" y="0" drill="1.35" diameter="2.5"/>
 <wire x1="-20.828" y1="16.002" x2="-20.828" y2="1.27" width="0.3048" layer="51"/>
