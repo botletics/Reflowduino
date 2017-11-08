@@ -13,7 +13,7 @@
  * is only sent once when you press "START" and once when you press "STOP".
  * 
  * Order a Reflowduino at https://www.botletics.com/products/reflowduino
- * Full documentation and design resources at https://github.com/botletics/Reflowdiuno
+ * Full documentation and design resources at https://github.com/botletics/Reflowduino
  * 
  * -----------------------------------------------------------------------------------------------
  * License: This code is released under the GNU General Public License v3.0
