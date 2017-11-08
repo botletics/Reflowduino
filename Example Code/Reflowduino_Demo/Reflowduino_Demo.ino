@@ -2,7 +2,7 @@
  * Title: Reflowduino Demo
  * Author: Timothy Woo
  * Website: www.botletics.com
- * Last modified: 10/29/2017
+ * Last modified: 11/8/2017
  * 
  * -----------------------------------------------------------------------------------------------
  * This is an example sketch for the Reflowduino reflow oven controller board. The default
@@ -14,7 +14,7 @@
  * uncomment lines 262-268 to enable this feature!
  * 
  * Order a Reflowduino at https://www.botletics.com/products/reflowduino
- * Full documentation and design resources at https://github.com/botletics/Reflowdiuno
+ * Full documentation and design resources at https://github.com/botletics/Reflowduino
  * 
  * -----------------------------------------------------------------------------------------------
  * Credits: Special thanks to all those who have been an invaluable part of the DIY community,
@@ -76,6 +76,11 @@ Adafruit_MAX31855 thermocouple(MAX_CS);
 #define T_soak 138
 #define T_reflow 165 - T_const
 
+// For my particular solder paste 145*C worked well
+#define T_preheat 70
+#define T_soak 118
+#define T_reflow 145 - T_const
+
 // Test values to make sure your Reflowduino is actually working
 //#define T_preheat 50
 //#define T_soak 80
@@ -113,8 +118,14 @@ double temperature, output, setPoint; // Input, output, set point
 PID myPID(&temperature, &output, &setPoint, Kp_preheat, Ki_preheat, Kd_preheat, DIRECT);
 
 // Buzzer settings
-// Notes in the melody
-int melody[] = {NOTE_C4, NOTE_G3, NOTE_G3, NOTE_A3, NOTE_G3, 0, NOTE_B3, NOTE_C4};
+// This melody plays when the reflow temperature is reached,
+// at which point you should open the door (for toaster ovens)
+int openDoorMelody[] = {
+  NOTE_G6 // I found that NOTE_G6 catches my attention pretty well
+};
+
+// This melody plays at the very end when it's safe to take your PCB's!
+int doneDealMelody[] = {NOTE_C4, NOTE_G3, NOTE_G3, NOTE_A3, NOTE_G3, 0, NOTE_B3, NOTE_C4};
 
 // Note durations: 4 = quarter note, 8 = eighth note, etc.
 int noteDurations[] = {4, 8, 8, 4, 4, 4, 4, 4};
@@ -219,6 +230,7 @@ void loop() {
         reflowComplete = true;
         t_start = millis();
         Serial.println("Reflow phase complete!");
+        playTune(openDoorMelody); // Alert the user to open the door!
       }
       else {
         t_final = (T_reflow - T_start) / reflow_rate + t_start;
@@ -232,7 +244,7 @@ void loop() {
         reflow = false;
         Serial.println("PCB reflow complete!");
         BT.print(stopChar); // Tell the app that the entire process is finished!
-        playTune(); // Play the buzzer melody
+        playTune(doneDealMelody); // Play the buzzer melody
       }
       else {
         t_final = (T_cool - T_start) / cool_rate + t_start;
@@ -300,7 +312,7 @@ void loop() {
 
 // This function plays the melody for the buzzer.
 // Make this as simple or as elaborate as you wish!
-void playTune() {
+void playTune(int *melody) {
   // Iterate over the notes of the melody:
   for (int thisNote = 0; thisNote < 8; thisNote++) {
     // To calculate the note duration, take one second divided by the note type
