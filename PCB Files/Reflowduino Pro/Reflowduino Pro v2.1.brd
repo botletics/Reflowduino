@@ -183,12 +183,12 @@
 <wire x1="0" y1="1" x2="1" y2="0" width="0" layer="20" curve="90"/>
 <wire x1="1" y1="0" x2="85.36" y2="0" width="0" layer="20"/>
 <wire x1="85.36" y1="0" x2="86.36" y2="1" width="0" layer="20" curve="90"/>
-<wire x1="73.66" y1="24.13" x2="85.36" y2="24.13" width="0" layer="20"/>
+<wire x1="74.93" y1="24.13" x2="85.36" y2="24.13" width="0" layer="20"/>
 <wire x1="85.36" y1="24.13" x2="86.36" y2="23.13" width="0" layer="20" curve="-90"/>
 <wire x1="86.36" y1="23.13" x2="86.36" y2="1" width="0" layer="20"/>
 <wire x1="86.36" y1="52.34" x2="86.36" y2="30.21" width="0" layer="20"/>
 <wire x1="86.36" y1="30.21" x2="85.36" y2="29.21" width="0" layer="20" curve="-90"/>
-<wire x1="85.36" y1="29.21" x2="73.66" y2="29.21" width="0" layer="20"/>
+<wire x1="85.36" y1="29.21" x2="74.93" y2="29.21" width="0" layer="20"/>
 <wire x1="86.36" y1="52.34" x2="85.36" y2="53.34" width="0" layer="20" curve="90"/>
 <wire x1="85.36" y1="53.34" x2="1" y2="53.34" width="0" layer="20"/>
 <wire x1="1" y1="53.34" x2="0" y2="52.34" width="0" layer="20" curve="90"/>
@@ -250,7 +250,7 @@ botletics.com</text>
 <vertex x="53.34" y="46.6725"/>
 </polygon>
 <text x="33.655" y="4.318" size="1.27" layer="21" font="vector" ratio="16" rot="R90">GND</text>
-<text x="79.375" y="26.3525" size="3.175" layer="51" font="vector" ratio="16" align="center">AC OUT</text>
+<text x="80.01" y="26.67" size="3.175" layer="51" font="vector" ratio="16" align="center">AC OUT</text>
 <text x="53.8988" y="14.2875" size="1.27" layer="21" font="vector" ratio="16">RLY-</text>
 <text x="51.3588" y="37.7825" size="1.27" layer="21" font="vector" ratio="16">RLY+</text>
 <text x="8.89" y="30.7975" size="0.8128" layer="21" font="vector" ratio="16">500mA</text>
@@ -268,8 +268,8 @@ Released under CC-BY-SA-4.0 license</text>
 <text x="34.671" y="4.318" size="0.8128" layer="21" font="vector" ratio="16">3V3</text>
 <text x="54.4195" y="17.5895" size="0.8128" layer="21" font="vector" ratio="16">SELECT</text>
 <text x="42.7355" y="43.2308" size="0.8128" layer="21" font="vector" ratio="16" rot="R90">BZZR</text>
-<wire x1="73.66" y1="29.21" x2="71.12" y2="26.67" width="0" layer="20" curve="90"/>
-<wire x1="71.12" y1="26.67" x2="73.66" y2="24.13" width="0" layer="20" curve="90"/>
+<wire x1="74.93" y1="29.21" x2="72.39" y2="26.67" width="0" layer="20" curve="90"/>
+<wire x1="72.39" y1="26.67" x2="74.93" y2="24.13" width="0" layer="20" curve="90"/>
 <rectangle x1="74.93" y1="30.48" x2="85.09" y2="35.56" layer="29"/>
 <rectangle x1="74.93" y1="17.78" x2="85.09" y2="22.86" layer="29"/>
 </plain>
