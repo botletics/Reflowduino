@@ -1,8 +1,8 @@
 /*
- * Title: Reflowduino Bluetooth Test
+ * Title: Reflowduino Bluetooth Demo
  * Author: Timothy Woo
  * Website: www.botletics.com
- * Last modified: 10/21/2017
+ * Last modified: 11/16/2017
  * 
  * -----------------------------------------------------------------------------------------------
  * This is an example sketch to test the Reflowduino Bluetooth functionality. Simply upload this
@@ -26,6 +26,7 @@
 // Define pins
 #define BT_RX 9
 #define BT_TX 10
+#define LED 13
 
 // Initialize Bluetooth software serial
 SoftwareSerial BT = SoftwareSerial(BT_TX,BT_RX); // Reflowduino (RX, TX), Bluetooth (TX, RX)
@@ -43,6 +44,9 @@ unsigned long sendRate = 2000; // Send data to app every 2s
 void setup() {
   Serial.begin(9600); // This should be different from the Bluetooth baud rate
   BT.begin(57600);
+
+  pinMode(LED, OUTPUT);
+  digitalWrite(LED, LOW);
 
   while (!Serial) delay(1); // OPTIONAL: Wait for serial to connect
   Serial.println("*****Reflowduino Bluetooth Demo*****");
@@ -73,10 +77,12 @@ void loop() {
 
   if (request == startReflow) { // Command from app to start reflow process
     Serial.println("<-- ***Starting reflow process!"); // Left arrow means it received a command
+    digitalWrite(LED, HIGH); // Turn on the red LED!
     // Do other stuff here
   }
   else if (request == stopReflow) { // Command to stop reflow process
     Serial.println("<-- ***Reflow process aborted!");
+    digitalWrite(LED, LOW);
     // Do other stuff here
   }
   // Add you own functions here and have fun with it!
