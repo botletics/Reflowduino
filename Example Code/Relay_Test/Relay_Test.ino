@@ -1,5 +1,5 @@
 /*
- * Title: Reflowduino Relay Test
+ * Title: Reflowduino Relay Demo
  * Author: Timothy Woo
  * Website: www.botletics.com
  * Last modified: 10/21/2017
@@ -7,6 +7,7 @@
  * -----------------------------------------------------------------------------------------------
  * This is an example sketch to test the Reflowduino solid-state relay. Simply enter "ON" or "OFF"
  * in the serial monitor (case sensitive) and the relay will turn ON or OFF accordingly!
+ * NOTE: Make sure you have "No line ending" selected in the serial monitor!
  * 
  * Order a Reflowduino at https://www.botletics.com/products/reflowduino
  * Full documentation and design resources at https://github.com/botletics/Reflowdiuno
