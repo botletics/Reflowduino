@@ -2,7 +2,7 @@
  * Title: Reflowduino Demo
  * Author: Timothy Woo
  * Website: www.botletics.com
- * Last modified: 11/8/2017
+ * Last modified: 12/1/2017
  * 
  * -----------------------------------------------------------------------------------------------
  * This is an example sketch for the Reflowduino reflow oven controller board. The default
@@ -76,11 +76,6 @@ Adafruit_MAX31855 thermocouple(MAX_CS);
 #define T_soak 138
 #define T_reflow 165 - T_const
 
-// For my particular solder paste 145*C worked well
-#define T_preheat 70
-#define T_soak 118
-#define T_reflow 145 - T_const
-
 // Test values to make sure your Reflowduino is actually working
 //#define T_preheat 50
 //#define T_soak 80
@@ -120,7 +115,7 @@ PID myPID(&temperature, &output, &setPoint, Kp_preheat, Ki_preheat, Kd_preheat, 
 // Buzzer settings
 // This melody plays when the reflow temperature is reached,
 // at which point you should open the door (for toaster ovens)
-int openDoorMelody[] = {
+int openDoorTune[] = {
   NOTE_G6 // I found that NOTE_G6 catches my attention pretty well
 };
 
@@ -230,7 +225,7 @@ void loop() {
         reflowComplete = true;
         t_start = millis();
         Serial.println("Reflow phase complete!");
-        playTune(openDoorMelody); // Alert the user to open the door!
+        tone(buzzer, openDoorTune, 2000); // Alert the user to open the door!
       }
       else {
         t_final = (T_reflow - T_start) / reflow_rate + t_start;
