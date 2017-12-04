@@ -194,7 +194,7 @@
 <wire x1="86.36" y1="52.34" x2="85.36" y2="53.34" width="0" layer="20" curve="90"/>
 <wire x1="85.36" y1="53.34" x2="1" y2="53.34" width="0" layer="20"/>
 <wire x1="1" y1="53.34" x2="0" y2="52.34" width="0" layer="20" curve="90"/>
-<text x="28.575" y="26.67" size="3.81" layer="22" font="vector" ratio="16" rot="MR180" align="center">Reflowduino v2.1
+<text x="28.575" y="26.67" size="3.81" layer="22" font="vector" ratio="16" rot="MR180" align="center">Reflowduino v3
 botletics.com</text>
 <hole x="5.08" y="50.8" drill="3.2"/>
 <hole x="3.81" y="2.54" drill="3.2"/>

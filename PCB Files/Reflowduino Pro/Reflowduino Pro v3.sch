@@ -12880,7 +12880,7 @@ Standard 8-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <sheet>
 <plain>
 <text x="351.028" y="13.208" size="3.81" layer="97" align="top-left">Timothy Woo</text>
-<text x="419.608" y="6.604" size="3.81" layer="97">v2.1</text>
+<text x="419.608" y="6.604" size="3.81" layer="97">v3</text>
 <wire x1="431.8" y1="114.3" x2="431.8" y2="111.76" width="0.3048" layer="94"/>
 <text x="229.87" y="205.74" size="1.27" layer="91">IOREF</text>
 <text x="229.87" y="208.28" size="1.27" layer="91">RFU</text>
