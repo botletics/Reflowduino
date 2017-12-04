@@ -194,8 +194,7 @@
 <wire x1="86.36" y1="52.34" x2="85.36" y2="53.34" width="0" layer="20" curve="90"/>
 <wire x1="85.36" y1="53.34" x2="1" y2="53.34" width="0" layer="20"/>
 <wire x1="1" y1="53.34" x2="0" y2="52.34" width="0" layer="20" curve="90"/>
-<text x="28.575" y="26.67" size="3.81" layer="22" font="vector" ratio="16" rot="MR180" align="center">Reflowduino v3
-botletics.com</text>
+<text x="28.575" y="30.48" size="3.81" layer="22" font="vector" ratio="16" rot="MR180" align="center">Reflowduino v3</text>
 <hole x="5.08" y="50.8" drill="3.2"/>
 <hole x="3.81" y="2.54" drill="3.2"/>
 <text x="20.2565" y="25.146" size="0.8128" layer="21" font="vector" ratio="16">BT</text>
@@ -240,7 +239,7 @@ botletics.com</text>
 <text x="52.705" y="49.022" size="1.27" layer="21" font="vector" ratio="16" rot="R270">0</text>
 <text x="0.3175" y="43.4975" size="0.8128" layer="21" font="vector" ratio="16">ON</text>
 <text x="0.4445" y="31.4325" size="0.8128" layer="21" font="vector" ratio="16">13</text>
-<text x="29.5275" y="28.2575" size="1.778" layer="21" font="vector" ratio="16" align="center">botletics.com</text>
+<text x="30.7975" y="28.2575" size="1.778" layer="21" font="vector" ratio="16" align="center">botletics</text>
 <polygon width="0.3048" layer="21">
 <vertex x="51.435" y="46.6725"/>
 <vertex x="50.165" y="46.6725"/>
@@ -274,6 +273,7 @@ Released under CC-BY-SA-4.0 license</text>
 <wire x1="72.39" y1="26.67" x2="74.93" y2="24.13" width="0" layer="20" curve="90"/>
 <rectangle x1="74.93" y1="30.48" x2="85.09" y2="35.56" layer="29"/>
 <rectangle x1="74.93" y1="17.78" x2="85.09" y2="22.86" layer="29"/>
+<text x="33.655" y="25.4" size="2.54" layer="22" font="vector" ratio="16" rot="MR180" align="center">botletics</text>
 </plain>
 <libraries>
 <library name="TimWoo-Capacitors" urn="urn:adsk.eagle:library:500759">
