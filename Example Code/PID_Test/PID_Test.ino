@@ -102,7 +102,7 @@ void setup() {
   myPID.SetSampleTime(PID_sampleTime);
   myPID.SetMode(AUTOMATIC); // Turn on PID control
 
-  while (!Serial) delay(1); // OPTIONAL: Wait for serial to connect
+//   while (!Serial) delay(1); // OPTIONAL: Wait for serial to connect
   Serial.println("*****Reflowduino PID Test*****");
 
   if (enableKeyboard) Keyboard.begin(); // Only if you want to type data into Excel
