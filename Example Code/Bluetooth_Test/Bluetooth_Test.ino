@@ -48,7 +48,7 @@ void setup() {
   pinMode(LED, OUTPUT);
   digitalWrite(LED, LOW);
 
-  while (!Serial) delay(1); // OPTIONAL: Wait for serial to connect
+//   while (!Serial) delay(1); // OPTIONAL: Wait for serial to connect
   Serial.println("*****Reflowduino Bluetooth Demo*****");
 }
 
