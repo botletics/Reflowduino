@@ -48,7 +48,7 @@ Adafruit_MAX31855 thermocouple(MAXCS);
 void setup() {
   Serial.begin(9600);
  
-  while (!Serial) delay(1); // wait for Serial on Leonardo/Zero, etc
+//   while (!Serial) delay(1); // wait for Serial on Leonardo/Zero, etc
 
   Serial.println("MAX31855 test");
   // wait for MAX chip to stabilize
