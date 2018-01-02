@@ -27,7 +27,7 @@ void setup() {
   pinMode(relay, OUTPUT);
   digitalWrite(relay, LOW); // Default is OFF
 
-  while (!Serial) delay(1);
+//   while (!Serial) delay(1);
   Serial.println("*****Reflowduino Relay Test*****");
   Serial.println("Enter \"ON\" or \"OFF\" into serial monitor");
 }
