@@ -141,7 +141,7 @@ unsigned long previousMillis = 0;
 unsigned long duration, t_final, windowStartTime, timer;
 
 void setup() {
-  Serial.begin(115200); // This should be different from the Bluetooth baud rate
+  Serial.begin(9600); // This should be different from the Bluetooth baud rate
   BT.begin(57600);
 
   pinMode(buzzer, OUTPUT);
