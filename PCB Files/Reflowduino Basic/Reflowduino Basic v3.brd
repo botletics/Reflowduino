@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="10" altunitdist="mil" altunit="mil"/>
+<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -23,20 +23,20 @@
 <layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
 <layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
 <layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="24" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="16" fill="1" visible="yes" active="yes"/>
-<layer number="22" name="bPlace" color="6" fill="1" visible="no" active="yes"/>
+<layer number="22" name="bPlace" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
@@ -1353,7 +1353,7 @@ Please make sure your boards conform to these design rules.</description>
 <param name="mlMaxStopFrame" value="2.5mil"/>
 <param name="mlMinCreamFrame" value="0mil"/>
 <param name="mlMaxCreamFrame" value="0mil"/>
-<param name="mlViaStopLimit" value="0mil"/>
+<param name="mlViaStopLimit" value="20mil"/>
 <param name="srRoundness" value="0"/>
 <param name="srMinRoundness" value="0mil"/>
 <param name="srMaxRoundness" value="0mil"/>
@@ -1499,7 +1499,7 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="VALUE" x="4.5085" y="33.147" size="0.8128" layer="27" rot="R180"/>
 </element>
 <element name="FID2" library="TimWoo-Aesthetics" library_urn="urn:adsk.eagle:library:502097" package="FIDUCIAL_1MM" package3d_urn="urn:adsk.eagle:package:502130/2" value="FIDUCIAL" x="52.07" y="8.255" smashed="yes" rot="R270"/>
-<element name="FID1" library="TimWoo-Aesthetics" library_urn="urn:adsk.eagle:library:502097" package="FIDUCIAL_1MM" package3d_urn="urn:adsk.eagle:package:502130/2" value="FIDUCIAL" x="10.795" y="26.67" smashed="yes" rot="R270"/>
+<element name="FID1" library="TimWoo-Aesthetics" library_urn="urn:adsk.eagle:library:502097" package="FIDUCIAL_1MM" package3d_urn="urn:adsk.eagle:package:502130/2" value="FIDUCIAL" x="1.905" y="51.435" smashed="yes" rot="R270"/>
 <element name="IC2" library="TimWoo-IC" library_urn="urn:adsk.eagle:library:500796" package="TQFP44" package3d_urn="urn:adsk.eagle:package:500858/2" value="ATMEGA32U4" x="39.37" y="16.51" smashed="yes" rot="R180">
 <attribute name="NAME" x="38.4175" y="18.415" size="0.8128" layer="25" font="vector" ratio="16"/>
 <attribute name="VALUE" x="43.815" y="25.2651" size="0.8128" layer="27" rot="R180"/>
