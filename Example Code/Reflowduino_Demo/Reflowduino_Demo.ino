@@ -258,7 +258,10 @@ void loop() {
 //    if (output < millis() - windowStartTime) digitalWrite(relay, HIGH); // If LOW turns on the relay
     else digitalWrite(relay, LOW);
   }
-  else digitalWrite(LED, LOW);
+  else {
+    digitalWrite(LED, LOW);
+    digitalWrite(relay, LOW);
+  }
 
   /***************************** BLUETOOTH CODE *****************************/
   BT.flush();
