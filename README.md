@@ -1,5 +1,6 @@
 # Reflowduino
 
+## Overview
 The Reflowduino project is an entire do-it-yourself (DIY) reflow ecosystem consisting of open-source hardware specifically built to make it easy to control reflow appliances and apply PID temperature control while maintaining full flexibility in programming and usage while offering a bunch of features.
 
 Since I'm a firm believer of great online resources having learned everything on my own aside from my Mechanical Engineering degree, I'm sharing all of this as completely open-source for everyone to enjoy, including EAGLE PCB files, Arduino IDE example code, sample Android app for Bluetooth control, and full tutorials on how to modify a toaster oven to start cookin’!
