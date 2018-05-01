@@ -81,7 +81,7 @@ Adafruit_MAX31855 thermocouple(MAX_CS);
 //#define T_soak 80
 //#define T_reflow 100 - T_const
 
-#define T_cool 40 // Safe temperature at which the board is "ready" (dinner bell sounds!)
+#define T_cool 50 // Safe temperature at which the board is "ready" (dinner bell sounds!)
 #define preheat_rate 2 // Increase of 1-3 *C/s
 #define soak_rate 0.7 // Increase of 0.5-1 *C/s
 #define reflow_rate 2 // Increase of 1-3 *C/s
