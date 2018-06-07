@@ -2,7 +2,7 @@
  * Title: Reflowduino Demo
  * Author: Timothy Woo
  * Website: www.botletics.com
- * Last modified: 12/1/2017
+ * Last modified: 6/7/2018
  * 
  * -----------------------------------------------------------------------------------------------
  * This is an example sketch for the Reflowduino reflow oven controller board. The default
@@ -63,7 +63,7 @@ Adafruit_MAX31855 thermocouple(MAX_CS);
 #define enableKeyboard false
 
 // Define reflow temperature profile parameters (in *C)
-// First define a subtraction constant to compensate for overshoot:
+// If needed, define a subtraction constant to compensate for overshoot:
 #define T_const 5 // From testing, overshoot was about 5-6*C
 
 // Standard lead-free solder paste (melting point around 215*C)
@@ -155,7 +155,7 @@ void setup() {
   myPID.SetSampleTime(PID_sampleTime);
   myPID.SetMode(AUTOMATIC); // Turn on PID control
 
-//   while (!Serial) delay(1); // OPTIONAL: Wait for serial to connect
+//  while (!Serial) delay(1); // OPTIONAL: Wait for serial to connect
   Serial.println("*****Reflowduino demo*****");
 
   if (enableKeyboard) Keyboard.begin(); // Only if you want to type data into Excel
@@ -306,6 +306,27 @@ void loop() {
     Serial.println("<-- ***Reflow process aborted!");
   }
   // Add you own functions here and have fun with it!
+
+  /*
+  // Alternatively, read commands from the serial monitor
+  char serialByte;
+  
+  if (Serial.available() > 0) {
+    serialByte = Serial.read();
+  }
+  if (serialByte == startReflow) {
+    justStarted = true;
+    reflow = true; // Reflow started!
+    t_start = millis(); // Record the start time
+    timer = millis(); // Timer for logging data points
+    Serial.println("<-- ***Reflow process started!"); // Left arrow means it received a command
+  }
+  else if (serialByte == stopReflow) { // Command to stop reflow process
+    digitalWrite(relay, LOW); // Turn off appliance and set flag to stop PID control
+    reflow = false;
+    Serial.println("<-- ***Reflow process aborted!");
+  }
+  */
 }
 
 // This function plays the melody for the buzzer.
