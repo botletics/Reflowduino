@@ -307,6 +307,7 @@ void loop() {
   }
   // Add you own functions here and have fun with it!
 
+  /***************************** SERIAL COMM CONTROL *****************************/
   /*
   // Alternatively, read commands from the serial monitor
   char serialByte;
