@@ -2,7 +2,7 @@
  * Title: Reflowduino PID Test
  * Author: Timothy Woo
  * Website: www.botletics.com
- * Last modified: 10/25/2017
+ * Last modified: 6/8/2018
  * 
  * -----------------------------------------------------------------------------------------------
  * This is an example sketch to test the PID control of the Reflowduino and facilitate choosing the
@@ -182,4 +182,25 @@ void loop() {
     Serial.println("<-- ***Reflow process aborted!");
   }
   // Add you own functions here and have fun with it!
+  
+  /*
+  // Alternatively, read commands from the serial monitor
+  char serialByte;
+  
+  if (Serial.available() > 0) {
+    serialByte = Serial.read();
+  }
+  if (serialByte == startReflow) {
+    justStarted = true;
+    reflow = true; // Reflow started!
+    t_start = millis(); // Record the start time
+    timer = millis(); // Timer for logging data points
+    Serial.println("<-- ***Reflow process started!"); // Left arrow means it received a command
+  }
+  else if (serialByte == stopReflow) { // Command to stop reflow process
+    digitalWrite(relay, LOW); // Turn off appliance and set flag to stop PID control
+    reflow = false;
+    Serial.println("<-- ***Reflow process aborted!");
+  }
+  */
 }
