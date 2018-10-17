@@ -1,5 +1,8 @@
 # Reflowduino
 
+## Introduction
+First off, let's briefly explain a circuit board is assembled. To aid in the explanation, let's take the analogy of baking a pizza. First of all you'll need the crust, which for us is a bare printed circuit board (PCB) made with different layers of a plastic substrate and copper traces that make the electrical connections. Next, we'll need the cheese that holds everything together, which for us is solder paste (yes, solder in the form of a paste) which "reflows" (solidifies or cures) at a high temperature. The solder paste is applied to the exposed copper pads on the PCB by way of a stencil that is aligned over the PCB. Then we'll grab some toppings, the electrical components, and place them in their appropriate locations on top of the solder paste. The final step is to bake our "pizza" so that the "cheese" holds all the components in place to yield our final assembled board! This is where the Reflowduino project comes in...
+
 ## Overview
 The Reflowduino project is an entire do-it-yourself (DIY) reflow ecosystem consisting of open-source hardware specifically built to make it easy to control reflow appliances and apply PID temperature control while maintaining full flexibility in programming and usage while offering a bunch of features.
 
