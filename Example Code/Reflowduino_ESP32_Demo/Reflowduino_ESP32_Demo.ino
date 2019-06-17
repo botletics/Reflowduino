@@ -2,7 +2,7 @@
  * Title: Reflowduino ESP32 Demo
  * Author: Timothy Woo
  * Website: www.botletics.com
- * Last modified: 3/24/2018
+ * Last modified: 6/17/2019
  * 
  * -----------------------------------------------------------------------------------------------
  * This is an example sketch for the Reflowduino32 'backpack' for DOIT ESP32 dev boards. The ESP32
@@ -260,7 +260,7 @@ void loop() {
       }
       else {
         // Calculate the projected final time based on temperature points and temperature rates
-        t_final = (T_preheat - T_start) / preheat_rate + t_start;
+        t_final = (T_preheat - T_start) / (preheat_rate / 1000) + t_start;
         // Calculate desired temperature at that instant in time using linear interpolation
         setPoint = duration * (T_preheat - T_start) / (t_final - t_start);
       }
@@ -273,7 +273,7 @@ void loop() {
         Serial.println("Soaking phase complete!");
       }
       else {
-        t_final = (T_soak - T_start) / soak_rate + t_start;
+        t_final = (T_soak - T_start) / (soak_rate / 1000) + t_start;
         setPoint = duration * (T_soak - T_start) / (t_final - t_start);
       }
     }
@@ -285,7 +285,7 @@ void loop() {
         Serial.println("Reflow phase complete!");
       }
       else {
-        t_final = (T_reflow - T_start) / reflow_rate + t_start;
+        t_final = (T_reflow - T_start) / (reflow_rate / 1000) + t_start;
         setPoint = duration * (T_reflow - T_start) / (t_final - t_start);
       }
     }
@@ -301,7 +301,7 @@ void loop() {
         pCharacteristic->notify(); // Send value to the app
       }
       else {
-        t_final = (T_cool - T_start) / cool_rate + t_start;
+        t_final = (T_cool - T_start) / (cool_rate / 1000) + t_start;
         setPoint = duration * (T_cool - T_start) / (t_final - t_start);
       }
     }
